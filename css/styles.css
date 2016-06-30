@@ -1,0 +1,18 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,600&subset=latin,cyrillic);
+@import url(https://fonts.googleapis.com/css?family=Cuprum:400,400italic,700,700italic&subset=latin,cyrillic);
+/* Blue */
+/* Red */
+/*********** Mixins **************/
+body {
+  font-family: "Open Sans", Calibri, Arial, sans-serif;
+  font-size: 13px;
+  color: #000;
+  background-color: #ffffff;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: Cuprum, Impact, sans-serif;
+}

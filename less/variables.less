@@ -1,0 +1,85 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,600&subset=latin,cyrillic);
+@import url(https://fonts.googleapis.com/css?family=Cuprum:400,400italic,700,700italic&subset=latin,cyrillic);
+
+@text-color: #000;
+@brand-color: #32425c; /* Blue */
+@dark-brand-color: #293449;
+
+@special-color: #ee3643; /* Red */
+@bg-color: #fff;
+
+@font-family-base: "Open Sans", Calibri, Arial, sans-serif;
+@font-family-compact: Cuprum, Impact, sans-serif;
+
+
+@base-font-size: 16px;
+@nav-font-size: @base-font-size + 2;
+
+@max-w-container: 1230px;
+
+@line-height: 1.9;
+
+
+/*********** Mixins **************/
+
+.linear-gradient(@angle; @bg-color-1; @bg-color-2) {
+  background-image: linear-gradient(@angle, @bg-color-1, @bg-color-2);
+}
+
+.border-round-coner(@radius: 25px) {
+  border-radius: @radius;
+}
+
+.zero-centered() {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+.placeholder-color(@color: red) {
+  &::-webkit-input-placeholder {
+    color: @color;
+  }
+  &::-moz-placeholder {
+    color: @color;
+  }
+  &:-ms-input-placeholder {
+    color: @color;
+  }
+}
+
+.triangle(@_; @size; @color) {
+    width: 0;
+    height: 0;
+    border-width: @size;
+    border-style: solid;
+    border-color: @color;
+}
+
+.triangle(top; @size; @color) {
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-top-style: none;
+}
+
+.triangle(right; @size; @color) {
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    border-right-style: none;
+}
+
+.triangle(bottom; @size; @color) {
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-bottom-style: none;
+}
+
+.triangle(left; @size; @color) {
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    border-left-style: none;
+}
+
