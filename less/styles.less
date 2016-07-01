@@ -10,3 +10,116 @@ body {
 h1, h2, h3, h4, h5 {
   font-family: @font-family-compact;
 }
+
+.clearfix {
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  max-width: @max-w-container - (2 * @padding-base);
+  padding: 0 @padding-base;
+}
+
+/* Header */
+/** Top header **/
+
+.header {
+  &-main {
+    background-color: #f1f5f7;
+  }
+  
+  &-top {
+    color: @light-color;
+    background-color: @dark-brand-color;
+    
+    .logo {
+      float: left;
+      
+      a {
+        display: block;
+        position: relative;
+        padding: 10px 50px;
+        font-family: @font-family-compact;
+        font-size: @big-font-size;
+        font-weight: 700;
+        text-decoration: none;
+        color: @light-color;
+        background-color: @special-color;
+        
+        &:after {
+          content: "";
+          position: absolute;          
+          left: 0;
+          right: 0;
+          bottom: 0;
+          width: 100%;
+          background-color: @dark-special-color;
+          height: 5px;
+        }
+        
+        &:hover {
+          background-color: @add-1-special-color;
+          
+          &:after {
+            background-color: darken(@dark-special-color, 10%);
+          }
+        }
+        
+        &:active {
+          background-color: @add-2-special-color;
+          
+          &:after {
+            background-color: darken(@dark-special-color, 20%);
+          }
+        }
+      }
+      
+    }
+    
+    form {
+      position: relative;
+      float: left;
+      width: 390px;
+      font-family: @font-family-compact;
+      font-size: @base-font-size + 1;
+      font-weight: 400;
+      color: @text-color;
+      
+      input {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 12px @padding-base 11px 50px;
+        border: none;
+        outline: none;
+        background-color: transparent;
+        .placeholder-color(@light-color);
+        
+        &:focus {
+          background-color: @light-color;
+          .placeholder-color(@light-color);
+        }
+      }      
+      
+      .search-submit {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        left: 0;
+        top: 0;
+        border: none;
+        outline: none;
+        background-color: transparent;
+        color: @light-color;
+      }
+    }
+    
+    .top-nav {
+      float: right;
+    }
+  }  
+}

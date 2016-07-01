@@ -3,24 +3,35 @@
 
 @text-color: #000;
 @brand-color: #32425c; /* Blue */
-@dark-brand-color: #293449;
-
+@dark-brand-color: #293449; 
+@light-color: #fff;
 @special-color: #ee3643; /* Red */
-@bg-color: #fff;
+@add-1-special-color: #ca2c37;
+@add-2-special-color: #ba2732;
+@dark-special-color: #b52933;
+@bg-color: @light-color;
 
 @font-family-base: "Open Sans", Calibri, Arial, sans-serif;
 @font-family-compact: Cuprum, Impact, sans-serif;
 
-
 @base-font-size: 16px;
+@big-font-size: 24px;
 @nav-font-size: @base-font-size + 2;
-
-@max-w-container: 1230px;
 
 @line-height: 1.9;
 
 
+@max-w-container: 960px;
+@padding-base: 10px;
+
+
 /*********** Mixins **************/
+
+.ul-clear() {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
 
 .linear-gradient(@angle; @bg-color-1; @bg-color-2) {
   background-image: linear-gradient(@angle, @bg-color-1, @bg-color-2);
