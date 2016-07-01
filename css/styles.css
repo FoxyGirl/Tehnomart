@@ -2,6 +2,7 @@
 @import url(https://fonts.googleapis.com/css?family=Cuprum:400,400italic,700,700italic&subset=latin,cyrillic);
 /* Blue */
 /* Red */
+/* Green */
 /*********** Mixins **************/
 body {
   font-family: "Open Sans", Calibri, Arial, sans-serif;
@@ -41,7 +42,7 @@ h5 {
 .header-top .logo a {
   display: block;
   position: relative;
-  padding: 10px 50px;
+  padding: 8px 50px;
   font-family: Cuprum, Impact, sans-serif;
   font-size: 24px;
   font-weight: 700;
@@ -54,7 +55,7 @@ h5 {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 0;
+  bottom: -5px;
   width: 100%;
   background-color: #b52933;
   height: 5px;
@@ -74,7 +75,7 @@ h5 {
 .header-top form {
   position: relative;
   float: left;
-  width: 390px;
+  width: 270px;
   font-family: Cuprum, Impact, sans-serif;
   font-size: 17px;
   font-weight: 400;
@@ -83,7 +84,7 @@ h5 {
 .header-top form input {
   width: 100%;
   box-sizing: border-box;
-  padding: 12px 10px 11px 50px;
+  padding: 12px 10px 12px 50px;
   border: none;
   outline: none;
   background-color: transparent;
@@ -122,4 +123,41 @@ h5 {
 }
 .header-top .top-nav {
   float: right;
+}
+.header-top .top-nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.header-top .top-nav ul li {
+  float: left;
+}
+.header-top .top-nav ul a {
+  display: block;
+  padding: 12px 30px 12px 45px;
+  text-decoration: none;
+  font-family: Cuprum, Impact, sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  color: #ffffff;
+  background-color: none;
+}
+.header-top .top-nav ul a:active {
+  background-color: #040508;
+  opacity: 0.6;
+}
+.header-top .top-nav ul a.order {
+  padding-left: 22px;
+  padding-right: 22px;
+  background-color: #63a63e;
+}
+.header-top .top-nav ul a.order:hover {
+  background-color: #5fbb2d;
+}
+.header-top .top-nav ul a.order:active {
+  background-color: #518534;
+  opacity: 0.5;
+}
+.header-top .top-nav ul .order {
+  background-color: #63a63e;
 }

@@ -43,38 +43,38 @@ h1, h2, h3, h4, h5 {
       a {
         display: block;
         position: relative;
-        padding: 10px 50px;
+        padding: 8px 50px;
         font-family: @font-family-compact;
         font-size: @big-font-size;
         font-weight: 700;
         text-decoration: none;
         color: @light-color;
-        background-color: @special-color;
+        background-color: @spec-1-color;
         
         &:after {
           content: "";
           position: absolute;          
           left: 0;
           right: 0;
-          bottom: 0;
+          bottom: -5px;
           width: 100%;
-          background-color: @dark-special-color;
+          background-color: @dark-spec-1-color;
           height: 5px;
         }
         
         &:hover {
-          background-color: @add-1-special-color;
+          background-color: @add-1-spec-1-color;
           
           &:after {
-            background-color: darken(@dark-special-color, 10%);
+            background-color: darken(@dark-spec-1-color, 10%);
           }
         }
         
         &:active {
-          background-color: @add-2-special-color;
+          background-color: @add-2-spec-1-color;
           
           &:after {
-            background-color: darken(@dark-special-color, 20%);
+            background-color: darken(@dark-spec-1-color, 20%);
           }
         }
       }
@@ -84,7 +84,7 @@ h1, h2, h3, h4, h5 {
     form {
       position: relative;
       float: left;
-      width: 390px;
+      width: 270px;
       font-family: @font-family-compact;
       font-size: @base-font-size + 1;
       font-weight: 400;
@@ -93,7 +93,7 @@ h1, h2, h3, h4, h5 {
       input {
         width: 100%;
         box-sizing: border-box;
-        padding: 12px @padding-base 11px 50px;
+        padding: 12px @padding-base 12px 50px;
         border: none;
         outline: none;
         background-color: transparent;
@@ -120,6 +120,49 @@ h1, h2, h3, h4, h5 {
     
     .top-nav {
       float: right;
+      
+      ul {
+        .ul-clear();
+        
+        li {
+          float: left;
+        }
+        
+        a {
+          display: block;
+          padding: 12px 30px 12px 45px;
+          text-decoration: none;
+          font-family: @font-family-compact;
+          font-size: @base-font-size + 1;
+          font-weight: 400;
+          color: @light-color;
+          background-color: none;
+          
+          &:active {
+            background-color: darken(@dark-brand-color, 20%);
+            opacity: @base-opacity + 0.1;
+          }
+          
+          &.order {
+            padding-left: 22px;
+            padding-right: 22px;
+            background-color: @spec-2-color;
+            
+            &:hover {
+              background-color: @add-1-spec-2-color;
+            }
+            
+            &:active {
+              background-color: @add-2-spec-2-color;
+              opacity: @base-opacity;
+            }
+          }
+        }
+        
+        .order {
+          background-color: #63a63e;
+        }
+      }
     }
   }  
 }
