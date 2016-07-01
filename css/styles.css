@@ -1,5 +1,12 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,600&subset=latin,cyrillic);
 @import url(https://fonts.googleapis.com/css?family=Cuprum:400,400italic,700,700italic&subset=latin,cyrillic);
+@font-face {
+  font-family: 'symbols-technomart';
+  src: url('../font/symbols-technomart.eot?23527613');
+  src: url('../font/symbols-technomart.eot?23527613#iefix') format('embedded-opentype'), url('../font/symbols-technomart.woff?23527613') format('woff'), url('../font/symbols-technomart.ttf?23527613') format('truetype'), url('../font/symbols-technomart.svg?23527613#symbols-technomart') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 /* Blue */
 /* Red */
 /* Green */
@@ -81,6 +88,9 @@ h5 {
   font-weight: 400;
   color: #000000;
 }
+.header-top form:hover > .search-submit:before {
+  opacity: 1;
+}
 .header-top form input {
   width: 100%;
   box-sizing: border-box;
@@ -102,13 +112,17 @@ h5 {
   background-color: #ffffff;
 }
 .header-top form input:focus::-webkit-input-placeholder {
-  color: #ffffff;
+  color: #000000;
 }
 .header-top form input:focus::-moz-placeholder {
-  color: #ffffff;
+  color: #000000;
 }
 .header-top form input:focus:-ms-input-placeholder {
-  color: #ffffff;
+  color: #000000;
+}
+.header-top form input:focus + .search-submit:before {
+  color: #ee3643;
+  opacity: 1;
 }
 .header-top form .search-submit {
   position: absolute;
@@ -118,8 +132,17 @@ h5 {
   top: 0;
   border: none;
   outline: none;
+  text-align: left;
+  padding-left: 18px;
   background-color: transparent;
   color: #ffffff;
+}
+.header-top form .search-submit:before {
+  content: "\1f50d";
+  display: inline-block;
+  vertical-align: middle;
+  font-family: 'symbols-technomart';
+  opacity: 0.3;
 }
 .header-top .top-nav {
   float: right;
@@ -142,9 +165,38 @@ h5 {
   color: #ffffff;
   background-color: none;
 }
+.header-top .top-nav ul a:before {
+  opacity: 0.3;
+}
+.header-top .top-nav ul a:hover:before {
+  opacity: 1;
+}
 .header-top .top-nav ul a:active {
   background-color: #040508;
   opacity: 0.6;
+}
+.header-top .top-nav ul a:active:before {
+  opacity: 0.5;
+}
+.header-top .top-nav ul a.bookmark {
+  position: relative;
+}
+.header-top .top-nav ul a.bookmark:before {
+  content: "\1f516";
+  position: absolute;
+  left: 18px;
+  top: 13px;
+  font-family: 'symbols-technomart';
+}
+.header-top .top-nav ul a.basket {
+  position: relative;
+}
+.header-top .top-nav ul a.basket:before {
+  content: "\62";
+  position: absolute;
+  left: 18px;
+  top: 13px;
+  font-family: 'symbols-technomart';
 }
 .header-top .top-nav ul a.order {
   padding-left: 22px;

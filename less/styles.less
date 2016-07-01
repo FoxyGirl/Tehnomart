@@ -90,6 +90,14 @@ h1, h2, h3, h4, h5 {
       font-weight: 400;
       color: @text-color;
       
+      &:hover {
+        & > .search-submit {
+            &:before {
+              opacity: 1;
+            }
+        }
+      }
+      
       input {
         width: 100%;
         box-sizing: border-box;
@@ -101,7 +109,14 @@ h1, h2, h3, h4, h5 {
         
         &:focus {
           background-color: @light-color;
-          .placeholder-color(@light-color);
+          .placeholder-color(@text-color);
+          
+          & + .search-submit {
+            &:before {
+              color: @spec-1-color;
+              opacity: 1;
+            }
+          }
         }
       }      
       
@@ -113,8 +128,18 @@ h1, h2, h3, h4, h5 {
         top: 0;
         border: none;
         outline: none;
+        text-align: left;
+        padding-left: 18px;
         background-color: transparent;
         color: @light-color;
+        
+        &:before {
+          content: "\1f50d";
+          display: inline-block;
+          vertical-align: middle;
+          font-family: 'symbols-technomart';
+          opacity: @icon-opacity;
+        }
       }
     }
     
@@ -138,9 +163,47 @@ h1, h2, h3, h4, h5 {
           color: @light-color;
           background-color: none;
           
+          &:before {
+            opacity: @icon-opacity;
+          }
+          
+          &:hover {
+            &:before {
+              opacity: 1;
+            }
+          }
+          
           &:active {
             background-color: darken(@dark-brand-color, 20%);
             opacity: @base-opacity + 0.1;
+            
+            &:before {
+              opacity: @base-opacity;
+            }
+          }
+          
+          &.bookmark {
+            position: relative;
+            
+            &:before {
+              content: "\1f516";
+              position: absolute;
+              left: 18px;
+              top: 13px;
+              font-family: 'symbols-technomart';              
+            }
+          }
+          
+          &.basket {
+            position: relative;
+            
+            &:before {
+              content: "\62";
+              position: absolute;
+              left: 18px;
+              top: 13px;
+              font-family: 'symbols-technomart';
+            }
           }
           
           &.order {
