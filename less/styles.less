@@ -26,14 +26,16 @@ h1, h2, h3, h4, h5 {
 }
 
 /* Header */
-/** Top header **/
+
 
 .header {
   &-main {
     background-color: #f1f5f7;
   }
-  
+
+/** Top header **/  
   &-top {
+    margin-bottom: 45px;
     color: @light-color;
     background-color: @dark-brand-color;
     
@@ -228,4 +230,57 @@ h1, h2, h3, h4, h5 {
       }
     }
   }  
+
+/** Content header **/
+  &-content {
+    margin-bottom: 40px;
+  }
+  
+  &-definit {
+    float: left;
+    max-width: 206px;
+    padding: 0 52px;
+    font-family: @font-family-compact;
+    font-style: italic;
+    font-size: @base-font-size;
+    color: @spec-1-color;
+  }
+  
+  &-contact {
+    float: left;
+    width: 220px;
+    margin: 0 @padding-base;
+    font-family: @font-family-compact;
+    text-align: center;
+        
+    &-link {
+      display: inline-block;
+      position: relative;
+      box-sizing: border-box;
+      padding: 8px 18px 8px 40px;
+      margin-bottom: 5px;
+      border: 3px solid @light-color;
+      color: @spec-1-color;
+      text-decoration: none;      
+      font-size: @middle-font-size;
+      
+      &::before {
+        content: '\1f4de';
+        position: absolute;
+        left: 12px;
+        top: 10px;
+        font-family: 'symbols-technomart';
+        font-size: @big-font-size;
+        color: @gray-color;
+      }
+    }
+    
+    span {
+      display: inline-block;
+      color: @brand-color;
+      font-size: @base-font-size;
+    }
+  }
 }
+
+  
