@@ -429,3 +429,22 @@ h1, h2, h3, h4, h5 {
       }
   }
 }  
+
+/* Produce */
+.produce {
+  &-item {
+    float: left;
+    width: 320px - 2*@wrap-out;
+    min-height: @produce-item-height;
+    margin-bottom: 2*@wrap-out;
+    background-color: cyan;
+  }
+  
+  &-slider {
+    float: left;
+    width: 2*320px - 2*@wrap-out;
+    min-height: 2*@produce-item-height + 2*@wrap-out;
+    margin-bottom: 2*@wrap-out;
+    background-color: yellow;
+  }
+}

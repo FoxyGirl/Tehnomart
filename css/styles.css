@@ -381,3 +381,18 @@ h5 {
   background-color: #040508;
   opacity: 0.5;
 }
+/* Produce */
+.produce-item {
+  float: left;
+  width: 300px;
+  min-height: 120px;
+  margin-bottom: 20px;
+  background-color: cyan;
+}
+.produce-slider {
+  float: left;
+  width: 620px;
+  min-height: 260px;
+  margin-bottom: 20px;
+  background-color: yellow;
+}
