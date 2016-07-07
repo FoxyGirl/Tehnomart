@@ -48,7 +48,7 @@ h1, h2, h3, h4, h5 {
       a {
         display: block;
         position: relative;
-        padding: 8px 50px;
+        padding: 8px 52px;
         font-family: @font-family-compact;
         font-size: @big-font-size;
         font-weight: 700;
@@ -160,7 +160,8 @@ h1, h2, h3, h4, h5 {
         
         a {
           display: block;
-          padding: 12px 30px 12px 45px;
+          min-width: 93px;
+          padding: 12px 10px 12px 46px;
           text-decoration: none;
           font-family: @font-family-compact;
           font-size: @base-font-size + 1;
@@ -194,7 +195,7 @@ h1, h2, h3, h4, h5 {
               content: "\1f516";
               position: absolute;
               left: 18px;
-              top: 13px;
+              top: 11px;
               font-family: 'symbols-technomart';              
             }
           }
@@ -206,7 +207,7 @@ h1, h2, h3, h4, h5 {
               content: "\62";
               position: absolute;
               left: 18px;
-              top: 13px;
+              top: 11px;
               font-family: 'symbols-technomart';
             }
           }
@@ -248,8 +249,9 @@ h1, h2, h3, h4, h5 {
     color: @spec-1-color;
     
     p {
-      margin: 0;
+      margin: 2px 0 0 0;
       padding: 0 52px;
+      line-height: 1.45;
     }
   }
   
@@ -270,6 +272,7 @@ h1, h2, h3, h4, h5 {
       color: @spec-1-color;
       text-decoration: none;      
       font-size: @middle-font-size;
+      text-align: left;
       
       &::before {
         content: '\1f4de';
@@ -277,7 +280,7 @@ h1, h2, h3, h4, h5 {
         left: 12px;
         top: 10px;
         font-family: 'symbols-technomart';
-        font-size: @big-font-size;
+        font-size: @middle-font-size - 1;
         color: #b7bfc8;
       }
     }

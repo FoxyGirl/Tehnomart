@@ -55,7 +55,7 @@ h5 {
 .header-top .logo a {
   display: block;
   position: relative;
-  padding: 8px 50px;
+  padding: 8px 52px;
   font-family: Cuprum, Impact, sans-serif;
   font-size: 24px;
   font-weight: 700;
@@ -163,7 +163,8 @@ h5 {
 }
 .header-top .top-nav ul a {
   display: block;
-  padding: 12px 30px 12px 45px;
+  min-width: 93px;
+  padding: 12px 10px 12px 46px;
   text-decoration: none;
   font-family: Cuprum, Impact, sans-serif;
   font-size: 17px;
@@ -191,7 +192,7 @@ h5 {
   content: "\1f516";
   position: absolute;
   left: 18px;
-  top: 13px;
+  top: 11px;
   font-family: 'symbols-technomart';
 }
 .header-top .top-nav ul a.basket {
@@ -201,7 +202,7 @@ h5 {
   content: "\62";
   position: absolute;
   left: 18px;
-  top: 13px;
+  top: 11px;
   font-family: 'symbols-technomart';
 }
 .header-top .top-nav ul a.order {
@@ -231,8 +232,9 @@ h5 {
   color: #ee3643;
 }
 .header-definit p {
-  margin: 0;
+  margin: 2px 0 0 0;
   padding: 0 52px;
+  line-height: 1.45;
 }
 .header-contact {
   float: left;
@@ -251,6 +253,7 @@ h5 {
   color: #ee3643;
   text-decoration: none;
   font-size: 21px;
+  text-align: left;
 }
 .header-contact-link::before {
   content: '\1f4de';
@@ -258,7 +261,7 @@ h5 {
   left: 12px;
   top: 10px;
   font-family: 'symbols-technomart';
-  font-size: 24px;
+  font-size: 20px;
   color: #b7bfc8;
 }
 .header-contact span {
