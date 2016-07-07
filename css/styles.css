@@ -42,7 +42,9 @@ h5 {
   /** Content header **/
 }
 .header-main {
+  margin-bottom: 60px;
   background-color: #f1f5f7;
+  border-bottom: 1px solid transparent;
 }
 .header-top {
   margin-bottom: 45px;
@@ -325,4 +327,57 @@ h5 {
 }
 .top-nav-user a.user-login:active::before {
   color: #c5c5c5;
+}
+.main-nav {
+  margin-bottom: 60px;
+}
+.main-nav ul {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  padding-right: 20px;
+  padding-left: 20px;
+  font-size: 0;
+  text-align: center;
+  background-color: #32425c;
+}
+.main-nav ul::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 5px;
+  background-color: #293449;
+}
+.main-nav li {
+  display: inline-block;
+  font-family: Cuprum, Impact, sans-serif;
+  font-size: 17px;
+  color: #ffffff;
+}
+.main-nav li.active {
+  padding: 20px 30px 22px;
+  cursor: pointer;
+}
+.main-nav li.active:hover {
+  background-color: #293449;
+}
+.main-nav li.active:active {
+  background-color: #040508;
+  opacity: 0.5;
+}
+.main-nav a {
+  display: inline-block;
+  padding: 20px 30px 22px;
+  text-decoration: none;
+  color: #ffffff;
+}
+.main-nav a:hover {
+  background-color: #293449;
+}
+.main-nav a:active {
+  background-color: #040508;
+  opacity: 0.5;
 }
