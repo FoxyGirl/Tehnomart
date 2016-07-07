@@ -24,15 +24,17 @@ h4,
 h5 {
   font-family: Cuprum, Impact, sans-serif;
 }
-.clearfix:after {
+.clearfix::after {
   content: '';
   display: table;
   clear: both;
 }
 .container {
   margin: 0 auto;
-  max-width: 940px;
-  padding: 0 10px;
+  max-width: 960px;
+}
+.wrap {
+  margin: 0 10px;
 }
 /* Header */
 .header {
@@ -61,7 +63,7 @@ h5 {
   color: #ffffff;
   background-color: #ee3643;
 }
-.header-top .logo a:after {
+.header-top .logo a::after {
   content: "";
   position: absolute;
   left: 0;
@@ -74,13 +76,13 @@ h5 {
 .header-top .logo a:hover {
   background-color: #ca2c37;
 }
-.header-top .logo a:hover:after {
+.header-top .logo a:hover::after {
   background-color: #8b2027;
 }
 .header-top .logo a:active {
   background-color: #ba2732;
 }
-.header-top .logo a:active:after {
+.header-top .logo a:active::after {
   background-color: #62161c;
 }
 .header-top form {
@@ -92,7 +94,7 @@ h5 {
   font-weight: 400;
   color: #000000;
 }
-.header-top form:hover > .search-submit:before {
+.header-top form:hover > .search-submit::before {
   opacity: 1;
 }
 .header-top form input {
@@ -124,7 +126,7 @@ h5 {
 .header-top form input:focus:-ms-input-placeholder {
   color: #000000;
 }
-.header-top form input:focus + .search-submit:before {
+.header-top form input:focus + .search-submit::before {
   color: #ee3643;
   opacity: 1;
 }
@@ -141,7 +143,7 @@ h5 {
   background-color: transparent;
   color: #ffffff;
 }
-.header-top form .search-submit:before {
+.header-top form .search-submit::before {
   content: "\1f50d";
   display: inline-block;
   vertical-align: middle;
@@ -169,23 +171,23 @@ h5 {
   color: #ffffff;
   background-color: none;
 }
-.header-top .top-nav ul a:before {
+.header-top .top-nav ul a::before {
   opacity: 0.3;
 }
-.header-top .top-nav ul a:hover:before {
+.header-top .top-nav ul a:hover::before {
   opacity: 1;
 }
 .header-top .top-nav ul a:active {
   background-color: #040508;
   opacity: 0.6;
 }
-.header-top .top-nav ul a:active:before {
+.header-top .top-nav ul a:active::before {
   opacity: 0.5;
 }
 .header-top .top-nav ul a.bookmark {
   position: relative;
 }
-.header-top .top-nav ul a.bookmark:before {
+.header-top .top-nav ul a.bookmark::before {
   content: "\1f516";
   position: absolute;
   left: 18px;
@@ -195,7 +197,7 @@ h5 {
 .header-top .top-nav ul a.basket {
   position: relative;
 }
-.header-top .top-nav ul a.basket:before {
+.header-top .top-nav ul a.basket::before {
   content: "\62";
   position: absolute;
   left: 18px;
@@ -222,25 +224,28 @@ h5 {
 }
 .header-definit {
   float: left;
-  max-width: 206px;
-  padding: 0 52px;
+  max-width: 320px;
   font-family: Cuprum, Impact, sans-serif;
   font-style: italic;
   font-size: 16px;
   color: #ee3643;
 }
+.header-definit p {
+  margin: 0;
+  padding: 0 52px;
+}
 .header-contact {
   float: left;
-  width: 220px;
-  margin: 0 10px;
+  width: 240px;
   font-family: Cuprum, Impact, sans-serif;
   text-align: center;
 }
 .header-contact-link {
-  display: inline-block;
+  display: block;
   position: relative;
   box-sizing: border-box;
-  padding: 8px 18px 8px 40px;
+  width: 220px;
+  padding: 8px 10px 8px 40px;
   margin-bottom: 5px;
   border: 3px solid #ffffff;
   color: #ee3643;
@@ -260,4 +265,61 @@ h5 {
   display: inline-block;
   color: #32425c;
   font-size: 16px;
+}
+.header-user {
+  float: right;
+  max-width: 320px;
+}
+.top-nav-user {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: right;
+  font-size: 0;
+}
+.top-nav-user li {
+  display: inline-block;
+  margin-right: 10px;
+}
+.top-nav-user li:last-child {
+  margin-right: 0;
+}
+.top-nav-user a {
+  display: block;
+  padding: 10px 25px;
+  text-decoration: none;
+  font-family: Cuprum, Impact, sans-serif;
+  font-size: 21px;
+  color: #000000;
+  background-color: #ffffff;
+}
+.top-nav-user a:hover {
+  color: #ee3643;
+}
+.top-nav-user a:hover::before {
+  color: #32425c;
+}
+.top-nav-user a:active {
+  color: #c5c5c5;
+}
+.top-nav-user a.user-login {
+  position: relative;
+  padding-left: 45px;
+}
+.top-nav-user a.user-login::before {
+  content: '\2386';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 10px;
+  left: 14px;
+  font-family: 'symbols-technomart';
+  font-size: 22px;
+  color: #c5c5c5;
+}
+.top-nav-user a.user-login:hover::before {
+  color: #32425c;
+}
+.top-nav-user a.user-login:active::before {
+  color: #c5c5c5;
 }

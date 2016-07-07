@@ -12,7 +12,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .clearfix {
-  &:after {
+  &::after {
     content: '';
     display: table;
     clear: both;
@@ -21,8 +21,11 @@ h1, h2, h3, h4, h5 {
 
 .container {
   margin: 0 auto;
-  max-width: @max-w-container - (2 * @padding-base);
-  padding: 0 @padding-base;
+  max-width: @max-w-container;
+}
+
+.wrap {
+  margin: 0 @wrap-out;
 }
 
 /* Header */
@@ -53,7 +56,7 @@ h1, h2, h3, h4, h5 {
         color: @light-color;
         background-color: @spec-1-color;
         
-        &:after {
+        &::after {
           content: "";
           position: absolute;          
           left: 0;
@@ -67,7 +70,7 @@ h1, h2, h3, h4, h5 {
         &:hover {
           background-color: @add-1-spec-1-color;
           
-          &:after {
+          &::after {
             background-color: darken(@dark-spec-1-color, 10%);
           }
         }
@@ -75,7 +78,7 @@ h1, h2, h3, h4, h5 {
         &:active {
           background-color: @add-2-spec-1-color;
           
-          &:after {
+          &::after {
             background-color: darken(@dark-spec-1-color, 20%);
           }
         }
@@ -94,7 +97,7 @@ h1, h2, h3, h4, h5 {
       
       &:hover {
         & > .search-submit {
-            &:before {
+            &::before {
               opacity: 1;
             }
         }
@@ -103,7 +106,7 @@ h1, h2, h3, h4, h5 {
       input {
         width: 100%;
         box-sizing: border-box;
-        padding: 12px @padding-base 12px 50px;
+        padding: 12px @wrap-out 12px 50px;
         border: none;
         outline: none;
         background-color: transparent;
@@ -114,7 +117,7 @@ h1, h2, h3, h4, h5 {
           .placeholder-color(@text-color);
           
           & + .search-submit {
-            &:before {
+            &::before {
               color: @spec-1-color;
               opacity: 1;
             }
@@ -135,7 +138,7 @@ h1, h2, h3, h4, h5 {
         background-color: transparent;
         color: @light-color;
         
-        &:before {
+        &::before {
           content: "\1f50d";
           display: inline-block;
           vertical-align: middle;
@@ -165,12 +168,12 @@ h1, h2, h3, h4, h5 {
           color: @light-color;
           background-color: none;
           
-          &:before {
+          &::before {
             opacity: @icon-opacity;
           }
           
           &:hover {
-            &:before {
+            &::before {
               opacity: 1;
             }
           }
@@ -179,7 +182,7 @@ h1, h2, h3, h4, h5 {
             background-color: darken(@dark-brand-color, 20%);
             opacity: @base-opacity + 0.1;
             
-            &:before {
+            &::before {
               opacity: @base-opacity;
             }
           }
@@ -187,7 +190,7 @@ h1, h2, h3, h4, h5 {
           &.bookmark {
             position: relative;
             
-            &:before {
+            &::before {
               content: "\1f516";
               position: absolute;
               left: 18px;
@@ -199,7 +202,7 @@ h1, h2, h3, h4, h5 {
           &.basket {
             position: relative;
             
-            &:before {
+            &::before {
               content: "\62";
               position: absolute;
               left: 18px;
@@ -238,26 +241,30 @@ h1, h2, h3, h4, h5 {
   
   &-definit {
     float: left;
-    max-width: 206px;
-    padding: 0 52px;
+    max-width: 320px;    
     font-family: @font-family-compact;
     font-style: italic;
     font-size: @base-font-size;
     color: @spec-1-color;
+    
+    p {
+      margin: 0;
+      padding: 0 52px;
+    }
   }
   
   &-contact {
     float: left;
-    width: 220px;
-    margin: 0 @padding-base;
+    width: 220px + 2*@wrap-out;
     font-family: @font-family-compact;
     text-align: center;
         
     &-link {
-      display: inline-block;
+      display: block;
       position: relative;
       box-sizing: border-box;
-      padding: 8px 18px 8px 40px;
+      width: 220px;
+      padding: 8px 10px 8px 40px;
       margin-bottom: 5px;
       border: 3px solid @light-color;
       color: @spec-1-color;
@@ -271,14 +278,88 @@ h1, h2, h3, h4, h5 {
         top: 10px;
         font-family: 'symbols-technomart';
         font-size: @big-font-size;
-        color: @gray-color;
+        color: #b7bfc8;
       }
     }
     
     span {
       display: inline-block;
       color: @brand-color;
-      font-size: @base-font-size;
+      font-size: @base-font-size;      
+    }
+  }
+  
+  &-user {
+    float: right;
+    max-width: 320px; 
+  }
+  
+  
+}
+
+.top-nav-user {
+  .ul-clear();
+  text-align: right;
+  font-size: 0;
+
+  li {
+    display: inline-block;
+    margin-right: @wrap-out;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  a {
+    display: block;        
+    padding: 10px 25px;
+    text-decoration: none;
+    font-family: @font-family-compact;
+    font-size: @middle-font-size;
+    color: @text-color;
+    background-color: @light-color;
+
+    &:hover {
+      color: @spec-1-color;
+
+      &::before {
+        color: @brand-color;
+      }
+    }
+    
+    &:active {
+      color: @gray-color;
+    }
+
+    &.user-login {
+      position: relative;
+      padding-left: 45px;
+
+      &::before {
+        content: '\2386';
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        top: 10px;
+        left: 14px;
+        font-family: 'symbols-technomart';
+        font-size: @middle-font-size + 1;
+        color: @gray-color;
+      }
+
+      &:hover {
+        &::before {
+          color: @brand-color;
+        }
+      }
+      
+      &:active {
+        &::before {
+          color: @gray-color;
+        }
+      }
+      
     }
   }
 }
