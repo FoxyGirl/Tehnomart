@@ -56,7 +56,7 @@ h1, h2, h3, h4, h5 {
 
 .header {
   &-main {
-    margin-bottom: 60px;
+    margin-bottom: 59px;
     background-color: #f1f5f7;
     border-bottom: 1px solid transparent;
   }
@@ -457,34 +457,37 @@ h1, h2, h3, h4, h5 {
 .promo {
   &-item {
     float: left;
-    width: 320px - 2*@wrap-out;
-    min-height: @promo-item-height;
+    width: 320px;    
     margin-bottom: 2*@wrap-out;
     color: @light-color;
-    background-color: cyan;
     
-    &.material {
+    &-content {
+      padding: 21px;
+      min-height: @promo-item-height - 2*21; /* see padding above */
+    }
+    
+    .material {
       background-color: #f6b22d;
     }
     
-    &.instrument {
+    .instrument {
       background-color: #4aafde;
     }
     
-    &.technics {
+    .technics {
       background-color: #cc79d1;
     }
     
-    &.discount {
+    .discount {
       background-color: #85d179;
     }
     
-    &.delivery {
+    .delivery {
       background-color: #f6b22d;
     }
     
     h3 {
-      margin: 20px 90px 15px 20px;
+      margin: 0 0 15px 0;
       font-family: @font-family-compact;
       font-size: @big-font-size;
       font-weight: 700;
@@ -492,7 +495,6 @@ h1, h2, h3, h4, h5 {
     
     .btn {
       width: 125px;
-      margin-left: 20px;
       padding-left: 5px;
       padding-right: 5px;
       background-color: rgba(0,0,0,0.1);
@@ -509,10 +511,13 @@ h1, h2, h3, h4, h5 {
   
   &-slider {
     float: left;
-    width: 2*320px - 2*@wrap-out;
-    min-height: 2*@promo-item-height + 2*@wrap-out;
-    margin-bottom: 2*@wrap-out;
-    background-color: yellow;
+    width: 2*320px;
+    margin-bottom: 2*@wrap-out;    
+    
+    &-content {
+      min-height: 2*@promo-item-height + 2*@wrap-out;
+      background-color: yellow;
+    }
   }  
   
 }
