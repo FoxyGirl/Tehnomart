@@ -28,8 +28,31 @@ h1, h2, h3, h4, h5 {
   margin: 0 @wrap-out;
 }
 
-/* Header */
+.btn {
+  display: inline-block;
+  padding: 11px 40px;
+  text-decoration: none;
+  color: @light-color;
+  font-family: @font-family-compact;
+  font-size: @btn-font-size;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+  background-color:@spec-1-color;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  
+  &:hover {
+    background-color: @add-1-spec-1-color;
+  }
+  
+  &:active {
+    background-color: @add-2-spec-1-color;
+  }
+}
 
+/* Header */
 
 .header {
   &-main {
@@ -431,20 +454,65 @@ h1, h2, h3, h4, h5 {
 }  
 
 /* Produce */
-.produce {
+.promo {
   &-item {
     float: left;
     width: 320px - 2*@wrap-out;
-    min-height: @produce-item-height;
+    min-height: @promo-item-height;
     margin-bottom: 2*@wrap-out;
+    color: @light-color;
     background-color: cyan;
+    
+    &.material {
+      background-color: #f6b22d;
+    }
+    
+    &.instrument {
+      background-color: #4aafde;
+    }
+    
+    &.technics {
+      background-color: #cc79d1;
+    }
+    
+    &.discount {
+      background-color: #85d179;
+    }
+    
+    &.delivery {
+      background-color: #f6b22d;
+    }
+    
+    h3 {
+      margin: 20px 90px 15px 20px;
+      font-family: @font-family-compact;
+      font-size: @big-font-size;
+      font-weight: 700;
+    }
+    
+    .btn {
+      width: 125px;
+      margin-left: 20px;
+      padding-left: 5px;
+      padding-right: 5px;
+      background-color: rgba(0,0,0,0.1);
+      
+      &:hover {
+        background-color: rgba(0,0,0,0.2);
+      }
+      
+      &:active {
+        background-color: rgba(0,0,0,0.3);
+      }
+    }
   }
   
   &-slider {
     float: left;
     width: 2*320px - 2*@wrap-out;
-    min-height: 2*@produce-item-height + 2*@wrap-out;
+    min-height: 2*@promo-item-height + 2*@wrap-out;
     margin-bottom: 2*@wrap-out;
     background-color: yellow;
-  }
+  }  
+  
 }

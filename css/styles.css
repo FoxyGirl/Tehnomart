@@ -36,6 +36,27 @@ h5 {
 .wrap {
   margin: 0 10px;
 }
+.btn {
+  display: inline-block;
+  padding: 11px 40px;
+  text-decoration: none;
+  color: #ffffff;
+  font-family: Cuprum, Impact, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #ee3643;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+}
+.btn:hover {
+  background-color: #ca2c37;
+}
+.btn:active {
+  background-color: #ba2732;
+}
 /* Header */
 .header {
   /** Top header **/
@@ -382,17 +403,52 @@ h5 {
   opacity: 0.5;
 }
 /* Produce */
-.produce-item {
+.promo-item {
   float: left;
   width: 300px;
-  min-height: 120px;
+  min-height: 123px;
   margin-bottom: 20px;
+  color: #ffffff;
   background-color: cyan;
 }
-.produce-slider {
+.promo-item.material {
+  background-color: #f6b22d;
+}
+.promo-item.instrument {
+  background-color: #4aafde;
+}
+.promo-item.technics {
+  background-color: #cc79d1;
+}
+.promo-item.discount {
+  background-color: #85d179;
+}
+.promo-item.delivery {
+  background-color: #f6b22d;
+}
+.promo-item h3 {
+  margin: 20px 90px 15px 20px;
+  font-family: Cuprum, Impact, sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+}
+.promo-item .btn {
+  width: 125px;
+  margin-left: 20px;
+  padding-left: 5px;
+  padding-right: 5px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.promo-item .btn:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.promo-item .btn:active {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.promo-slider {
   float: left;
   width: 620px;
-  min-height: 260px;
+  min-height: 266px;
   margin-bottom: 20px;
   background-color: yellow;
 }
