@@ -527,3 +527,17 @@ h1, h2, h3, h4, h5 {
   }  
   
 }
+
+.new {
+  position: relative;
+  
+  &::after {
+    content: "";
+    position: absolute;
+    right: -0;
+    top: 0;
+    width: 60px;
+    height: 59px;
+    background: url('../img/new-sign.png') 0 0 no-repeat;
+  }
+}

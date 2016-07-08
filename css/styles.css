@@ -462,3 +462,15 @@ h5 {
   min-height: 266px;
   background-color: yellow;
 }
+.new {
+  position: relative;
+}
+.new::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 60px;
+  height: 59px;
+  background: url('../img/new-sign.png') 0 0 no-repeat;
+}
