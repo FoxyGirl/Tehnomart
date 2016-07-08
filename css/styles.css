@@ -413,21 +413,27 @@ h5 {
   padding: 21px;
   min-height: 81px;
   /* see padding above */
+  background: url('../img/sprite-promo.png') no-repeat 194px 0;
 }
 .promo-item .material {
   background-color: #f6b22d;
+  background-position: 194px -2px;
 }
 .promo-item .instrument {
   background-color: #4aafde;
+  background-position: 191px -161px;
 }
 .promo-item .technics {
   background-color: #cc79d1;
+  background-position: 187px -279px;
 }
 .promo-item .discount {
   background-color: #85d179;
+  background-position: 185px -424px;
 }
 .promo-item .delivery {
   background-color: #f6b22d;
+  background-position: 188px -563px;
 }
 .promo-item h3 {
   margin: 0 0 15px 0;
