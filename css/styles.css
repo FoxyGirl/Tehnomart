@@ -38,7 +38,7 @@ h5 {
 }
 .btn {
   display: inline-block;
-  padding: 11px 40px;
+  padding: 11px 10px;
   text-decoration: none;
   color: #ffffff;
   font-family: Cuprum, Impact, sans-serif;
@@ -403,6 +403,9 @@ h5 {
   opacity: 0.5;
 }
 /* Produce */
+.promo {
+  margin-bottom: 33px;
+}
 .promo-item {
   float: left;
   width: 320px;
@@ -473,4 +476,23 @@ h5 {
   width: 60px;
   height: 59px;
   background: url('../img/new-sign.png') 0 0 no-repeat;
+}
+.popular {
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 20px;
+  padding: 27px;
+  font-family: Cuprum, Impact, sans-serif;
+  font-size: 30px;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+  color: #32425c;
+  background-color: #f7f3ec;
+}
+.popular .btn {
+  position: absolute;
+  right: 25px;
+  top: 24px;
+  width: 233px;
+  letter-spacing: 0;
 }

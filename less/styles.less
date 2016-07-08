@@ -30,7 +30,7 @@ h1, h2, h3, h4, h5 {
 
 .btn {
   display: inline-block;
-  padding: 11px 40px;
+  padding: 11px @wrap-out;
   text-decoration: none;
   color: @light-color;
   font-family: @font-family-compact;
@@ -455,6 +455,8 @@ h1, h2, h3, h4, h5 {
 
 /* Produce */
 .promo {
+  margin-bottom: 53px - 2*@wrap-out;
+  
   &-item {
     float: left;
     width: 320px;    
@@ -539,5 +541,26 @@ h1, h2, h3, h4, h5 {
     width: 60px;
     height: 59px;
     background: url('../img/new-sign.png') 0 0 no-repeat;
+  }
+}
+
+.popular {
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 2*@wrap-out;
+  padding: 27px;
+  font-family: @font-family-compact;
+  font-size: 30px;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+  color: @brand-color;
+  background-color: #f7f3ec;
+  
+  .btn {
+    position: absolute;
+    right: 25px;
+    top: 24px;
+    width: 253px - 2*@wrap-out;
+    letter-spacing: 0;
   }
 }
