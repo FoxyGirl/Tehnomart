@@ -641,3 +641,20 @@ h5 {
   border-top-color: #ffffff;
   border-bottom-color: #ffffff;
 }
+/* Brands */
+.brands {
+  font-size: 0;
+}
+.brands-item {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  width: 218px;
+  margin: 0 10px 20px 10px;
+  font-size: 16px;
+  border: 1px solid #c5c5c5;
+  background-color: yellow;
+}
+.brands-item a {
+  display: block;
+}
