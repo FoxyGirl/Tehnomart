@@ -473,6 +473,7 @@ h5 {
   position: absolute;
   right: 0;
   top: 0;
+  z-index: 10;
   width: 60px;
   height: 59px;
   background: url('../img/new-sign.png') 0 0 no-repeat;
@@ -513,24 +514,132 @@ h5 {
   text-align: center;
   border: 1px solid #c5c5c5;
 }
+.catalog-item.new::after {
+  top: -1px;
+  right: -1px;
+}
+.catalog-item:hover {
+  box-shadow: 0 5px 25px rgba(41, 52, 73, 0.5);
+}
+.catalog-item:hover .catalog-item-actions {
+  display: block;
+}
+.catalog-item-actions {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  padding: 40px 0;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+.catalog-item-actions .btn {
+  width: 129px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin-bottom: 7px;
+  border: 3px solid #63a63e;
+  background-color: #63a63e;
+}
+.catalog-item-actions .btn.act-buy {
+  border-bottom-color: #367315;
+}
+.catalog-item-actions .btn.act-buy:hover {
+  border-color: #5fbb2d;
+  border-bottom-color: #367315;
+  background-color: #5fbb2d;
+}
+.catalog-item-actions .btn.act-buy:active {
+  border-color: #518534;
+  border-bottom-color: #367315;
+  background-color: #518534;
+}
+.catalog-item-actions .btn.basket {
+  position: relative;
+}
+.catalog-item-actions .btn.basket::before {
+  content: '\62';
+  position: absolute;
+  left: 18px;
+  top: 6px;
+  font-family: 'symbols-technomart';
+  font-style: normal;
+  font-size: 17px;
+  text-transform: none;
+  opacity: 0.3;
+}
+.catalog-item-actions .btn.basket:hover::before,
+.catalog-item-actions .btn.basket:active::before {
+  opacity: 1;
+}
+.catalog-item-actions .btn.act-bookmark {
+  color: #32425c;
+  background-color: #ffffff;
+}
+.catalog-item-actions .btn.act-bookmark:hover {
+  border-color: #32425c;
+}
+.catalog-item-actions .btn.act-bookmark:hover:active {
+  opacity: 0.3;
+}
 .catalog-item-img {
   max-width: 100%;
+  margin-bottom: 5px;
 }
 .catalog-item-title {
-  margin-bottom: 15px;
+  min-height: 40px;
+  padding: 0 20px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+.catalog-item-title a {
+  color: #000000;
+  text-decoration: none;
+}
+.catalog-item-title a:hover,
+.catalog-item-title a:active {
+  color: #32425c;
+}
+.catalog-item-title a:visited {
+  color: #748cb3;
 }
 .catalog-item-title span {
   text-transform: uppercase;
 }
 .catalog-item-old-price {
+  min-height: 20px;
   margin-bottom: 10px;
   color: #c5c5c5;
   text-decoration: line-through;
 }
 .catalog-item-price {
+  position: relative;
   display: inline-block;
-  margin-bottom: 10px;
-  padding: 10px;
+  vertical-align: top;
+  width: 80px;
+  margin-bottom: 20px;
+  padding: 9px 27px;
+  text-transform: uppercase;
   background-color: #ee3643;
   color: #ffffff;
+  border-radius: 4px;
+}
+.catalog-item-price::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -25px;
+  width: 0;
+  height: 0;
+  border-width: 19px;
+  border-style: solid;
+  border-color: #ee3643;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  border-right-style: none;
+  border-right-color: #ffffff;
+  border-right-style: solid;
+  border-top-color: #ffffff;
+  border-bottom-color: #ffffff;
 }

@@ -538,6 +538,7 @@ h1, h2, h3, h4, h5 {
     position: absolute;
     right: -0;
     top: 0;
+    z-index: 10;
     width: 60px;
     height: 59px;
     background: url('../img/new-sign.png') 0 0 no-repeat;
@@ -578,16 +579,123 @@ h1, h2, h3, h4, h5 {
     font-family: @font-family-base;
     font-size: @base-font-size;
     font-weight: 600;
-    line-height: 20px;
+    line-height: @line-height-product-title;
     text-align: center;
     border: 1px solid @gray-color;
     
+    &.new {     
+      &::after {
+        top: -1px;
+        right: -1px;
+      }      
+    }
+    
+    &:hover {
+      box-shadow: 0 5px 25px rgba(41,52,73,0.5);
+     
+      .catalog-item-actions {
+        display: block;
+      }
+    }
+    
+    &-actions {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+      width: 100%;
+      padding: 40px 0;
+      background-color: rgba(255,255,255,0.9);
+      
+      .btn {
+        width: 129px;
+        padding-top: 6px;
+        padding-bottom: 6px;
+        margin-bottom: 7px;
+        border: 3px solid @spec-2-color;
+        background-color: @spec-2-color;
+        
+        &.act-buy {
+          border-bottom-color: @dark-spec-2-color;
+          
+          &:hover {
+            border-color: @add-1-spec-2-color;
+            border-bottom-color: @dark-spec-2-color;
+            background-color: @add-1-spec-2-color;
+          }
+          
+          &:active {
+            border-color: @add-2-spec-2-color;
+            border-bottom-color: @dark-spec-2-color;
+            background-color: @add-2-spec-2-color;
+          }
+        }
+        
+        &.basket {
+            position: relative;
+            
+            &::before {
+              content: '\62';
+              position: absolute;
+              left: 18px;
+              top: 6px;
+              font-family: 'symbols-technomart';
+              font-style: normal;
+              font-size: 17px;
+              text-transform: none;
+              opacity: @icon-opacity;
+            }
+          
+          &:hover,
+          &:active {
+            &::before {
+              opacity: 1;
+            }
+          }
+        }
+        
+        &.act-bookmark {
+          color: @brand-color;
+          background-color: @light-color;
+          
+          &:hover {
+            border-color: @brand-color;
+            
+            &:active {
+              opacity: 0.3;
+            }
+          }      
+        
+        }
+        
+      }
+    }
+    
     &-img {
       max-width: 100%;
+      margin-bottom: 5px;
     }
     
     &-title {
-      margin-bottom: 15px;
+      min-height: 2*@line-height-product-title;
+      padding: 0 20px;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      
+      a {
+        color: @text-color;
+        text-decoration: none;
+        
+        &:hover,
+        &:active {
+          color: @brand-color;
+        }
+        
+        &:visited {
+          color: lighten(@brand-color, 30%);
+        }
+      }
       
       span {
         text-transform: uppercase;
@@ -595,18 +703,36 @@ h1, h2, h3, h4, h5 {
     }
     
     &-old-price {
+      min-height: @line-height-product-title;
       margin-bottom: 10px;
       color: @gray-color;
       text-decoration: line-through;
     }
     
     &-price {
+      position: relative;
       display: inline-block;
-      margin-bottom: 10px;
-      padding: 10px;
+      vertical-align: top;
+      width: 80px;
+      margin-bottom: 2*@wrap-out;
+      padding: 9px 27px;
+      text-transform: uppercase;
       background-color: @spec-1-color;
       color: @light-color;
+      border-radius: 4px;
       
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: -25px;        
+        .triangle(right; 19px; @spec-1-color);
+        border-right-color: @light-color;
+        border-right-style: solid;
+        border-top-color: @light-color;
+        border-bottom-color: @light-color;
+      }
     }
   }
 }
+
