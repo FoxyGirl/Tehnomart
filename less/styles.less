@@ -684,17 +684,14 @@ h1, h2, h3, h4, h5 {
       text-transform: uppercase;
       
       a {
+        display: block;
         color: @text-color;
         text-decoration: none;
         
         &:hover,
         &:active {
-          color: @brand-color;
-        }
-        
-        &:visited {
-          color: lighten(@brand-color, 30%);
-        }
+          color: @spec-2-color;
+        }        
       }
       
       span {

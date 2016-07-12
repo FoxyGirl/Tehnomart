@@ -594,15 +594,13 @@ h5 {
   text-transform: uppercase;
 }
 .catalog-item-title a {
+  display: block;
   color: #000000;
   text-decoration: none;
 }
 .catalog-item-title a:hover,
 .catalog-item-title a:active {
-  color: #32425c;
-}
-.catalog-item-title a:visited {
-  color: #748cb3;
+  color: #63a63e;
 }
 .catalog-item-title span {
   text-transform: uppercase;
