@@ -736,19 +736,27 @@ h1, h2, h3, h4, h5 {
 /* Brands */
 .brands {
   font-size: 0;
+  margin-bottom: 67px;
   
   &-item {
     display: inline-block;
     vertical-align: top;
-    position: relative;    
-    width: 218px;
     margin: 0 @wrap-out 2*@wrap-out @wrap-out;
     font-size: @base-font-size;
     border: 1px solid @gray-color;
-    background-color: yellow;
+    background-color: @light-color;
     
     a {
       display: block;
+      position: relative;    
+      width: 218px;
+      height: 143px;
+      
+      img {
+        .zero-centered();
+        max-width: 218px;
+        max-height: 143px;
+      }
     }
   }
 }

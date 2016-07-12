@@ -644,17 +644,29 @@ h5 {
 /* Brands */
 .brands {
   font-size: 0;
+  margin-bottom: 67px;
 }
 .brands-item {
   display: inline-block;
   vertical-align: top;
-  position: relative;
-  width: 218px;
   margin: 0 10px 20px 10px;
   font-size: 16px;
   border: 1px solid #c5c5c5;
-  background-color: yellow;
+  background-color: #ffffff;
 }
 .brands-item a {
   display: block;
+  position: relative;
+  width: 218px;
+  height: 143px;
+}
+.brands-item a img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  max-width: 218px;
+  max-height: 143px;
 }
