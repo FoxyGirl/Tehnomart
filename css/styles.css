@@ -255,6 +255,7 @@ h5 {
   color: #ee3643;
 }
 .header-definit p {
+  font: inherit;
   margin: 2px 0 0 0;
   padding: 0 52px;
   line-height: 1.45;
@@ -682,6 +683,31 @@ h5 {
   max-width: 218px;
   max-height: 143px;
 }
+/* Service */
 .service {
   background-color: #f2f6f8;
+  border-top: 1px solid transparent;
+}
+.service-header {
+  width: 435px;
+  margin-bottom: 60px;
+}
+.service-slider {
+  min-height: 280px;
+}
+h2 {
+  margin-top: 60px;
+  margin-bottom: 25px;
+  font-family: Cuprum, Impact, sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #000000;
+}
+p {
+  margin-top: 5px;
+  font-family: "Open Sans", Calibri, Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 1.8;
 }

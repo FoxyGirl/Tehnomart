@@ -274,6 +274,7 @@ h1, h2, h3, h4, h5 {
     color: @spec-1-color;
     
     p {
+      font: inherit;
       margin: 2px 0 0 0;
       padding: 0 52px;
       line-height: 1.45;
@@ -776,7 +777,39 @@ h1, h2, h3, h4, h5 {
   }
 }
 
+/* Service */
 .service {
   background-color: @bg-color-2;
+  border-top: 1px solid transparent;
+  
+  &-header {
+    width: 435px;
+    margin-bottom: 60px;
+  }
+  
+  &-slider {
+    min-height: 280px;
+  }
 } 
+
+h2 {
+  margin-top: 60px;
+  margin-bottom: 25px;
+  font-family: @font-family-compact;
+  font-size: @base-font-size + 14;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: @text-color;
+}
+
+p {
+  margin-top: 5px;
+  font-family: @font-family-base;
+  font-size: @base-font-size - 3;
+  font-weight: 300;
+  line-height: 1.8;
+}
+
+
+
 
