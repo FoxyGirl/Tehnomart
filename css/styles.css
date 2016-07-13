@@ -520,6 +520,7 @@ h5 {
 }
 .catalog-item:hover {
   box-shadow: 0 5px 25px rgba(41, 52, 73, 0.5);
+  border-color: #ffffff;
 }
 .catalog-item:hover .catalog-item-actions {
   display: block;
@@ -653,6 +654,17 @@ h5 {
   font-size: 16px;
   border: 1px solid #c5c5c5;
   background-color: #ffffff;
+}
+.brands-item:hover {
+  box-shadow: 0 5px 25px rgba(41, 52, 73, 0.5);
+  border-color: #ffffff;
+}
+.brands-item:active {
+  box-shadow: 0 4px 10px rgba(41, 52, 73, 0.5);
+  border-color: #ffffff;
+}
+.brands-item:active img {
+  opacity: 0.3;
 }
 .brands-item a {
   display: block;
