@@ -256,14 +256,24 @@
     <div class="container">
       <div class="wrap">
         <div class="service-header">
-          <h2>Сервисы</h2>
+          <h3>Сервисы</h3>
           <p>Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
         </div>
-        <div class="service-slider">
-          <div class="service-slider-content">
+        <div class="service-slider">          
+           <input type="radio" name="toggle-service" id="service_1" checked>
+           <div class="service-slider-item  delivery">
+             <div class="service-slider-title">
+               Доставка
+             </div>
+             <p>
+               Мы с удовольствием доставим ваш товар прямо <br>к вашему подъезду совершенно бесплатно! <br>Ведь мы неплохо заработаем, <br> 
+               поднимая его на ваш на этаж!
+             </p>  
+           </div>
+           <input type="radio" name="toggle-service" id="service_2">
+           <input type="radio" name="toggle-service" id="service_3">
             
-          </div>
-          <div class="service-slider-control">
+          <div class="service-slider-controls">
             <label for="service_1">Доставка</label>
             <label for="service_2">Гарантия</label>
             <label for="service_3">Кредит</label>

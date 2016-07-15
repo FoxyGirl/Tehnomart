@@ -693,9 +693,58 @@ h5 {
   margin-bottom: 60px;
 }
 .service-slider {
-  min-height: 280px;
+  position: relative;
+  min-height: 285px;
+  overflow: hidden;
 }
-h2 {
+.service-slider input[type="radio"] {
+  display: none;
+}
+.service-slider-controls {
+  width: 240px;
+}
+.service-slider-controls label {
+  display: block;
+  padding: 15px;
+  font-family: Cuprum, Impact, sans-serif;
+  font-weight: 700;
+  font-size: 21px;
+  color: #ffffff;
+  background-color: #32425c;
+  border-bottom: 1px solid #293449;
+  border-top: 1px solid #405069;
+  cursor: pointer;
+}
+.service-slider-item {
+  position: absolute;
+  top: 0;
+  left: 320px;
+  width: 65.62%;
+  height: 100%;
+  background-position: right bottom;
+  background-repeat: no-repeat;
+}
+.service-slider-item p {
+  width: 61.29%;
+}
+.service-slider-item.delivery {
+  background-image: url('../img/delivery.png');
+}
+.service-slider-title {
+  font-family: Cuprum, Impact, sans-serif;
+  font-size: 36px;
+  text-transform: uppercase;
+  color: #32425c;
+  margin-bottom: 30px;
+}
+#service_1:checked ~ .service-slider-controls label[for="service_1"],
+#service_2:checked ~ .service-slider-controls label[for="service_2"],
+#service_3:checked ~ .service-slider-controls label[for="service_3"] {
+  background-color: #ffffff;
+  color: #32425c;
+  border-color: #ffffff;
+}
+h3 {
   margin-top: 60px;
   margin-bottom: 25px;
   font-family: Cuprum, Impact, sans-serif;

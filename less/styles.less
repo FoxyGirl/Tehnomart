@@ -788,11 +788,68 @@ h1, h2, h3, h4, h5 {
   }
   
   &-slider {
-    min-height: 280px;
+    position: relative;
+    min-height: 285px;
+    overflow: hidden;
+    
+    input[type="radio"] {
+      display: none;
+    }
+    
+    &-controls {
+      width: 240px;
+      
+      label {
+        display: block;
+        padding: 15px;
+        font-family: @font-family-compact;
+        font-weight: 700;
+        font-size: @middle-font-size;
+        color: @light-color;
+        background-color: @brand-color;
+        border-bottom: 1px solid @dark-brand-color;
+        border-top: 1px solid #405069;
+        cursor: pointer;
+      }
+    }
+    
+    &-item {
+      position: absolute;
+      top: 0;
+      left: 320px;
+      width: 65.62%;
+      height: 100%;
+      background-position: right bottom;
+      background-repeat: no-repeat;
+      
+      p {
+        width: 61.29%;
+      }
+      
+      &.delivery {
+        background-image: url('../img/delivery.png');
+      }
+    }
+    
+    &-title {
+      font-family: @font-family-compact;
+      font-size: @base-font-size + 20;
+      text-transform: uppercase;
+      color: @brand-color;
+      margin-bottom: 30px;
+    }
   }
 } 
 
-h2 {
+#service_1:checked ~ .service-slider-controls label[for="service_1"],
+#service_2:checked ~ .service-slider-controls label[for="service_2"],
+#service_3:checked ~ .service-slider-controls label[for="service_3"] {
+  background-color: @light-color;
+  color: @brand-color;
+  border-color: @light-color;
+}
+
+h3 {
   margin-top: 60px;
   margin-bottom: 25px;
   font-family: @font-family-compact;
