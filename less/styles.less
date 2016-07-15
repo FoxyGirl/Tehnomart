@@ -796,7 +796,8 @@ h1, h2, h3, h4, h5 {
       display: none;
       
       &:checked + .service-slider-item {
-        display: block;
+        left: 320px;
+        transition: left 0.6s ease-in-out;
       }
     }
     
@@ -818,10 +819,9 @@ h1, h2, h3, h4, h5 {
     }
     
     &-item {
-      display: none;
       position: absolute;
       top: 0;
-      left: 320px;
+      left: 100%;
       width: 65.62%;
       height: 100%;
       background-position: right bottom;
