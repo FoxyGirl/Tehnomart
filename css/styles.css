@@ -690,7 +690,7 @@ h5 {
 }
 .service-header {
   width: 435px;
-  margin-bottom: 60px;
+  margin-bottom: 65px;
 }
 .service-slider {
   position: relative;
@@ -700,12 +700,15 @@ h5 {
 .service-slider input[type="radio"] {
   display: none;
 }
+.service-slider input[type="radio"]:checked + .service-slider-item {
+  display: block;
+}
 .service-slider-controls {
   width: 240px;
 }
 .service-slider-controls label {
   display: block;
-  padding: 15px;
+  padding: 19px 23px 18px;
   font-family: Cuprum, Impact, sans-serif;
   font-weight: 700;
   font-size: 21px;
@@ -716,6 +719,7 @@ h5 {
   cursor: pointer;
 }
 .service-slider-item {
+  display: none;
   position: absolute;
   top: 0;
   left: 320px;
@@ -730,12 +734,21 @@ h5 {
 .service-slider-item.delivery {
   background-image: url('../img/delivery.png');
 }
+.service-slider-item.guarantee {
+  background-image: url('../img/guarantee.png');
+}
+.service-slider-item.credit {
+  background-image: url('../img/credit.png');
+}
+.service-slider-item .btn {
+  min-width: 195px;
+}
 .service-slider-title {
   font-family: Cuprum, Impact, sans-serif;
   font-size: 36px;
   text-transform: uppercase;
   color: #32425c;
-  margin-bottom: 30px;
+  margin-bottom: 24px;
 }
 #service_1:checked ~ .service-slider-controls label[for="service_1"],
 #service_2:checked ~ .service-slider-controls label[for="service_2"],

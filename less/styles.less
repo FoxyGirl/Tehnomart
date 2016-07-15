@@ -784,7 +784,7 @@ h1, h2, h3, h4, h5 {
   
   &-header {
     width: 435px;
-    margin-bottom: 60px;
+    margin-bottom: 65px;
   }
   
   &-slider {
@@ -794,6 +794,10 @@ h1, h2, h3, h4, h5 {
     
     input[type="radio"] {
       display: none;
+      
+      &:checked + .service-slider-item {
+        display: block;
+      }
     }
     
     &-controls {
@@ -801,7 +805,7 @@ h1, h2, h3, h4, h5 {
       
       label {
         display: block;
-        padding: 15px;
+        padding: 19px 23px 18px;
         font-family: @font-family-compact;
         font-weight: 700;
         font-size: @middle-font-size;
@@ -814,6 +818,7 @@ h1, h2, h3, h4, h5 {
     }
     
     &-item {
+      display: none;
       position: absolute;
       top: 0;
       left: 320px;
@@ -829,6 +834,18 @@ h1, h2, h3, h4, h5 {
       &.delivery {
         background-image: url('../img/delivery.png');
       }
+      
+      &.guarantee {
+        background-image: url('../img/guarantee.png');
+      }
+      
+      &.credit {
+        background-image: url('../img/credit.png');
+      }
+      
+      .btn {
+        min-width: 195px;
+      }
     }
     
     &-title {
@@ -836,7 +853,7 @@ h1, h2, h3, h4, h5 {
       font-size: @base-font-size + 20;
       text-transform: uppercase;
       color: @brand-color;
-      margin-bottom: 30px;
+      margin-bottom: 24px;
     }
   }
 } 
