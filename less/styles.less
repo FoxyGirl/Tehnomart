@@ -784,25 +784,38 @@ h1, h2, h3, h4, h5 {
   
   &-header {
     width: 435px;
-    margin-bottom: 65px;
+    margin-bottom: 0; /* 65px - @service-padding; */
   }
   
   &-slider {
     position: relative;
-    min-height: 285px;
+    min-height: 275px;
+    padding-top: 14px; 
     overflow: hidden;
     
     input[type="radio"] {
       display: none;
       
       &:checked + .service-slider-item {
+        top: 50px;
         left: 320px;
         transition: left 0.6s ease-in-out;
       }
     }
     
     &-controls {
+      position: relative;
       width: 240px;
+      padding-top: @service-padding;
+      padding-bottom: @service-padding;
+      
+      img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 20;
+        height: 100%;
+      }
       
       label {
         display: block;
@@ -820,7 +833,7 @@ h1, h2, h3, h4, h5 {
     
     &-item {
       position: absolute;
-      top: 0;
+      top: @service-padding;
       left: 100%;
       width: 65.62%;
       height: 100%;

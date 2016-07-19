@@ -690,22 +690,35 @@ h5 {
 }
 .service-header {
   width: 435px;
-  margin-bottom: 65px;
+  margin-bottom: 0;
+  /* 65px - @service-padding; */
 }
 .service-slider {
   position: relative;
-  min-height: 285px;
+  min-height: 275px;
+  padding-top: 14px;
   overflow: hidden;
 }
 .service-slider input[type="radio"] {
   display: none;
 }
 .service-slider input[type="radio"]:checked + .service-slider-item {
+  top: 50px;
   left: 320px;
   transition: left 0.6s ease-in-out;
 }
 .service-slider-controls {
+  position: relative;
   width: 240px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.service-slider-controls img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 20;
+  height: 100%;
 }
 .service-slider-controls label {
   display: block;
@@ -721,7 +734,7 @@ h5 {
 }
 .service-slider-item {
   position: absolute;
-  top: 0;
+  top: 40px;
   left: 100%;
   width: 65.62%;
   height: 100%;
