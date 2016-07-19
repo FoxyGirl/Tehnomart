@@ -705,7 +705,8 @@ h5 {
 .service-slider input[type="radio"]:checked + .service-slider-item {
   top: 50px;
   left: 320px;
-  transition: left 0.6s ease-in-out;
+  opacity: 1;
+  transition: left 0.6s ease-in-out, opacity 1s ease-in-out;
 }
 .service-slider-controls {
   position: relative;
@@ -738,6 +739,7 @@ h5 {
   left: 100%;
   width: 65.62%;
   height: 100%;
+  opacity: 0;
   background-position: right bottom;
   background-repeat: no-repeat;
 }
