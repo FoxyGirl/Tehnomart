@@ -47,6 +47,7 @@ h5 {
   font-weight: 400;
   text-align: center;
   text-transform: uppercase;
+  letter-spacing: 0.01em;
   background-color: #ee3643;
   border: none;
   outline: none;
@@ -278,6 +279,7 @@ h5 {
   color: #ee3643;
   text-decoration: none;
   font-size: 21px;
+  letter-spacing: 0.015em;
   text-align: left;
 }
 .header-contact-link:hover {
@@ -499,7 +501,7 @@ h5 {
   padding: 27px;
   font-family: Cuprum, Impact, sans-serif;
   font-size: 30px;
-  letter-spacing: -1px;
+  letter-spacing: -0.015em;
   text-transform: uppercase;
   color: #32425c;
   background-color: #f7f3ec;
@@ -509,7 +511,6 @@ h5 {
   right: 25px;
   top: 24px;
   width: 233px;
-  letter-spacing: 0;
 }
 /* Product Catalog */
 .catalog {
@@ -606,7 +607,6 @@ h5 {
   min-height: 40px;
   padding: 0 20px;
   margin-bottom: 10px;
-  text-transform: uppercase;
 }
 .catalog-item-title a {
   display: block;
@@ -806,7 +806,7 @@ p {
 /* Information */
 .information {
   padding-top: 20px;
-  margin-bottom: 25px;
+  margin-bottom: 27px;
 }
 .information p {
   margin-bottom: 23px;
@@ -828,7 +828,7 @@ p {
   margin: 0;
   padding: 0;
   list-style: none;
-  margin-bottom: 27px;
+  margin-bottom: 25px;
   font-family: Cuprum, Impact, sans-serif;
   font-weight: 400;
   font-size: 18px;
@@ -867,17 +867,17 @@ p {
 }
 /* Footer content */
 .footer-content {
-  padding-bottom: 50px;
+  padding-bottom: 48px;
   background-color: #32425c;
   color: #ffffff;
 }
 .footer-content .logo a {
   font-size: 30px;
-  padding: 16px 36px;
+  padding: 16px 36px 12px;
 }
 .footer-content nav {
   float: right;
-  margin-bottom: 18px;
+  margin-bottom: 16px;
 }
 .footer-content nav ul {
   margin: 0;
@@ -927,4 +927,90 @@ p {
   padding-bottom: 3px;
   color: #ffffff;
   text-decoration: none;
+}
+.footer-bottom {
+  padding-top: 35px;
+  padding-bottom: 33px;
+  background-color: #293449;
+  color: #ffffff;
+  font-family: Cuprum, Impact, sans-serif;
+  font-size: 16px;
+  text-align: center;
+}
+.footer-bottom a {
+  text-decoration: none;
+  color: #ffd180;
+}
+.footer-bottom a:hover {
+  text-decoration: underline;
+}
+.footer-bottom a:active {
+  text-decoration: none;
+  color: #ee3643;
+}
+.social-contacts {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: inline-block;
+  vertical-align: top;
+  max-width: 320px;
+  font-size: 0;
+  text-align: center;
+}
+.social-contacts li {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 2px;
+  margin-left: 2px;
+}
+.social-contacts a {
+  display: block;
+  position: relative;
+  width: 42px;
+  height: 42px;
+  font-family: 'symbols-technomart';
+  background-color: #171d28;
+  border-radius: 50%;
+  text-decoration: none;
+}
+.social-contacts a:hover {
+  background-color: #ee3643;
+}
+i[class^="icon-"]::before {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  color: #ffffff;
+  font-family: 'symbols-technomart';
+  font-size: 18px;
+  font-style: normal;
+}
+.icon-vk::before {
+  content: '\76';
+}
+.icon-facebook::before {
+  content: '\66';
+}
+.icon-instagramm::before {
+  content: '📷';
+}
+.email {
+  float: right;
+  text-align: left;
+}
+.design {
+  float: right;
+  margin-left: 63px;
+  text-align: left;
+}
+.copyright {
+  float: left;
+  margin-right: 43px;
+  text-align: left;
 }

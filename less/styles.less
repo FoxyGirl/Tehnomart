@@ -38,6 +38,7 @@ h1, h2, h3, h4, h5 {
   font-weight: 400;
   text-align: center;
   text-transform: uppercase;
+  letter-spacing: 0.01em;
   background-color:@spec-1-color;
   border: none;
   outline: none;
@@ -298,6 +299,7 @@ h1, h2, h3, h4, h5 {
       color: @spec-1-color;
       text-decoration: none;      
       font-size: @middle-font-size;
+      letter-spacing: 0.015em;
       text-align: left;
       
       &:hover {
@@ -569,7 +571,7 @@ h1, h2, h3, h4, h5 {
   padding: 27px;
   font-family: @font-family-compact;
   font-size: 30px;
-  letter-spacing: -1px;
+  letter-spacing: -0.015em;
   text-transform: uppercase;
   color: @brand-color;
   background-color: #f7f3ec;
@@ -579,7 +581,6 @@ h1, h2, h3, h4, h5 {
     right: 25px;
     top: 24px;
     width: 253px - 2*@wrap-out;
-    letter-spacing: 0;
   }
 }
 
@@ -699,7 +700,6 @@ h1, h2, h3, h4, h5 {
       min-height: 2*@line-height-product-title;
       padding: 0 20px;
       margin-bottom: 10px;
-      text-transform: uppercase;
       
       a {
         display: block;
@@ -920,7 +920,7 @@ p {
 /* Information */
 .information {
   padding-top: 20px;
-  margin-bottom: 25px;
+  margin-bottom: 27px;
   
   p {
     margin-bottom: 23px;
@@ -943,7 +943,7 @@ p {
   
   ul {
     .ul-clear();
-    margin-bottom: 27px;    
+    margin-bottom: 25px;    
     font-family: @font-family-compact;
     font-weight: 400;
     font-size: @nav-font-size;
@@ -990,20 +990,20 @@ p {
 
 /* Footer content */
 .footer-content {
-  padding-bottom: 50px;
+  padding-bottom: 48px;
   background-color: @brand-color;
   color: @light-color;
   
   .logo {
     a {
       font-size: @base-font-size + 14;
-      padding: 16px 36px;
+      padding: 16px 36px 12px;
     }
   }
   
   nav {
     float: right;
-    margin-bottom: 18px;
+    margin-bottom: 16px;
 
     ul {
       .ul-clear();
@@ -1064,4 +1064,101 @@ p {
     color: @light-color;
     text-decoration: none;
   }
+}
+
+.footer-bottom {
+  padding-top: 35px;
+  padding-bottom: 33px;
+  background-color: @dark-brand-color;
+  color: @light-color;
+  font-family: @font-family-compact;
+  font-size: @base-font-size;
+  text-align: center;
+  
+  a {
+    text-decoration: none;
+    color: @spec-3-color;
+    
+    &:hover {
+      text-decoration: underline;
+    }
+    
+    &:active {
+      text-decoration: none;
+      color: @spec-1-color;
+    }
+  }
+}
+
+.social-contacts {
+  .ul-clear();
+  display: inline-block;
+  vertical-align: top;
+  max-width: 320px;
+  font-size: 0;
+  text-align: center;
+  
+  li {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 2px;
+    margin-left: 2px;
+  }
+  
+  a {
+    display: block;
+    position: relative;
+    width: 42px;
+    height: 42px;
+    font-family: 'symbols-technomart';
+    background-color: darken(@dark-brand-color, 10%);
+    border-radius: 50%;
+    text-decoration: none;
+    
+    &:hover {
+      background-color: @spec-1-color;
+    }
+  }
+}
+
+i[class^="icon-"] {
+  &::before {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    .zero-centered();
+    color: @light-color;
+    font-family: 'symbols-technomart';
+    font-size: @nav-font-size;
+    font-style: normal;
+  }
+}
+
+.icon-vk::before {
+  content: '\76';
+}
+
+.icon-facebook::before {
+  content: '\66';
+}
+
+.icon-instagramm::before {
+  content: '📷';
+}
+
+.email {
+  float: right;  
+  text-align: left;
+}
+
+.design {
+  float: right;
+  margin-left: 63px;
+  text-align: left;
+}
+
+.copyright {
+  float: left;
+  margin-right: 43px;
+  text-align: left;
 }
