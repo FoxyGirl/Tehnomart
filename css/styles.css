@@ -1014,3 +1014,88 @@ i[class^="icon-"]::before {
   margin-right: 43px;
   text-align: left;
 }
+/* Modals */
+.modal-shadow {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #000;
+  opacity: 0.7;
+}
+.contact-us {
+  position: fixed;
+  left: 50%;
+  top: 100px;
+  z-index: 2;
+  width: 620px;
+  margin-left: -310px;
+  padding-top: 40px;
+  font-family: Cuprum, Impact, sans-serif;
+  font-size: 18px;
+  background-color: #ffffff;
+  border-top: 7px solid #ee3643;
+}
+.contact-us label {
+  display: block;
+}
+.contact-us label span {
+  display: block;
+}
+.contact-us input,
+.contact-us textarea {
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: 3px;
+  border: 2px solid #d7dcde;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  padding: 10px 15px;
+  font-family: "Open Sans", Calibri, Arial, sans-serif;
+  font-size: 13px;
+  outline: none;
+}
+.contact-us input::-webkit-input-placeholder,
+.contact-us textarea::-webkit-input-placeholder {
+  color: #999999;
+}
+.contact-us input::-moz-placeholder,
+.contact-us textarea::-moz-placeholder {
+  color: #999999;
+}
+.contact-us input:-ms-input-placeholder,
+.contact-us textarea:-ms-input-placeholder {
+  color: #999999;
+}
+.contact-us textarea {
+  resize: none;
+  margin-bottom: 37px;
+}
+.wrap-form {
+  margin-right: 80px;
+  margin-left: 80px;
+}
+.contact-name {
+  float: left;
+  width: 220px;
+}
+.contact-email {
+  float: right;
+  width: 220px;
+}
+.send-form {
+  padding: 37px 80px;
+  background-color: #f1f1f1;
+}
+.send-form .btn {
+  min-width: 220px;
+}
+.send-form .btn[type="reset"] {
+  float: right;
+  background-color: #ffffff;
+  color: #000000;
+}
+.send-form .btn[type="reset"]:hover {
+  color: #ee3643;
+}
