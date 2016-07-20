@@ -774,7 +774,7 @@ h5 {
   color: #32425c;
   border-color: #ffffff;
 }
-h3 {
+h2 {
   margin-top: 60px;
   margin-bottom: 25px;
   font-family: Cuprum, Impact, sans-serif;
@@ -838,6 +838,7 @@ p {
   float: right;
   width: 31.91%;
   /* 300px / 940px */
+  margin-bottom: 85px;
 }
 .contacts a {
   display: block;
