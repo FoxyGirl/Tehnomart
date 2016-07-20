@@ -990,6 +990,7 @@ p {
 
 /* Footer content */
 .footer-content {
+  padding-bottom: 50px;
   background-color: @brand-color;
   color: @light-color;
   
@@ -1022,6 +1023,15 @@ p {
         padding-bottom: 10px;
         text-decoration: none;
         color: @light-color;
+        
+        &:hover {
+          text-decoration: underline;
+        }
+        
+        &:active {
+          text-decoration: none;
+          opacity: @base-opacity;
+        }
       }
     }
 
@@ -1041,4 +1051,17 @@ p {
   }
 }
 
-
+.address {
+  float: left;
+  padding-top: 10px;
+  font-family: @font-family-compact;
+  font-size: @nav-font-size;
+  color: @light-color;
+  
+  a {
+    display: block;
+    padding-bottom: 3px;
+    color: @light-color;
+    text-decoration: none;
+  }
+}
