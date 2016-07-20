@@ -808,9 +808,7 @@ p {
   margin-bottom: 85px;
 }
 .company .btn {
-  min-width: 180px;
-  padding-left: 20px;
-  padding-right: 20px;
+  min-width: 200px;
 }
 .company ul {
   margin: 0;
@@ -835,4 +833,16 @@ p {
   height: 2px;
   margin-top: -1px;
   background-color: #ee3643;
+}
+.contacts {
+  float: right;
+  width: 31.91%;
+  /* 300px / 940px */
+}
+.contacts a {
+  display: block;
+  margin-bottom: 40px;
+}
+.contacts .btn {
+  min-width: 280px;
 }
