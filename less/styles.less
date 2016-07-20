@@ -300,6 +300,10 @@ h1, h2, h3, h4, h5 {
       font-size: @middle-font-size;
       text-align: left;
       
+      &:hover {
+        font-weight: 700;
+      }
+      
       &::before {
         content: '\1f4de';
         position: absolute;
@@ -313,8 +317,20 @@ h1, h2, h3, h4, h5 {
     
     span {
       display: inline-block;
-      color: @brand-color;
-      font-size: @base-font-size;      
+      font-size: @base-font-size;
+      
+      a {
+        color: @brand-color;
+        text-decoration: none;
+        
+        &:hover {
+          text-decoration: underline;
+        }
+        
+        &:active {
+          opacity: 0.7;
+        }
+      }
     }
   }
   

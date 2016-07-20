@@ -279,6 +279,9 @@ h5 {
   font-size: 21px;
   text-align: left;
 }
+.header-contact-link:hover {
+  font-weight: 700;
+}
 .header-contact-link::before {
   content: '\1f4de';
   position: absolute;
@@ -290,8 +293,17 @@ h5 {
 }
 .header-contact span {
   display: inline-block;
-  color: #32425c;
   font-size: 16px;
+}
+.header-contact span a {
+  color: #32425c;
+  text-decoration: none;
+}
+.header-contact span a:hover {
+  text-decoration: underline;
+}
+.header-contact span a:active {
+  opacity: 0.7;
 }
 .header-user {
   float: right;
