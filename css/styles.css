@@ -846,6 +846,7 @@ p {
   margin-top: -1px;
   background-color: #ee3643;
 }
+/* Contacts */
 .contacts {
   float: right;
   width: 31.91%;
@@ -855,6 +856,9 @@ p {
 .contacts a {
   display: block;
   margin-bottom: 40px;
+}
+.contacts img {
+  max-width: 100%;
 }
 .contacts .btn {
   min-width: 280px;
