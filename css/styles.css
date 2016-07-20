@@ -10,6 +10,7 @@
 /* Blue */
 /* Red */
 /* Green */
+/* almost Yellow */
 /*********** Mixins **************/
 body {
   font-family: "Open Sans", Calibri, Arial, sans-serif;
@@ -873,26 +874,36 @@ p {
   font-size: 30px;
   padding: 16px 36px;
 }
-.bottom-nav {
+.footer-content nav {
   float: right;
+  margin-bottom: 18px;
 }
-.bottom-nav ul {
+.footer-content nav ul {
   margin: 0;
   padding: 0;
   list-style: none;
   margin-top: 30px;
 }
-.bottom-nav ul li {
+.footer-content nav ul li {
   float: left;
   font-family: Cuprum, Impact, sans-serif;
   font-size: 18px;
   color: #ffffff;
 }
-.bottom-nav ul a {
+.footer-content nav ul a {
   display: inline-block;
   margin-left: 60px;
   padding-top: 10px;
   padding-bottom: 10px;
   text-decoration: none;
   color: #ffffff;
+}
+.footer-content nav.bottom-nav ul {
+  margin-top: 0;
+}
+.footer-content nav.bottom-nav ul li {
+  color: #ffd180;
+}
+.footer-content nav.bottom-nav ul a {
+  color: #ffd180;
 }
