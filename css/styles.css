@@ -57,6 +57,42 @@ h5 {
 .btn:active {
   background-color: #ba2732;
 }
+.logo {
+  float: left;
+}
+.logo a {
+  display: block;
+  position: relative;
+  padding: 8px 52px;
+  font-family: Cuprum, Impact, sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #ee3643;
+}
+.logo a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -5px;
+  width: 100%;
+  background-color: #b52933;
+  height: 5px;
+}
+.logo a:hover {
+  background-color: #ca2c37;
+}
+.logo a:hover::after {
+  background-color: #8b2027;
+}
+.logo a:active {
+  background-color: #ba2732;
+}
+.logo a:active::after {
+  background-color: #62161c;
+}
 /* Header */
 .header {
   /** Top header **/
@@ -71,42 +107,6 @@ h5 {
   margin-bottom: 45px;
   color: #ffffff;
   background-color: #293449;
-}
-.header-top .logo {
-  float: left;
-}
-.header-top .logo a {
-  display: block;
-  position: relative;
-  padding: 8px 52px;
-  font-family: Cuprum, Impact, sans-serif;
-  font-size: 24px;
-  font-weight: 700;
-  text-decoration: none;
-  color: #ffffff;
-  background-color: #ee3643;
-}
-.header-top .logo a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -5px;
-  width: 100%;
-  background-color: #b52933;
-  height: 5px;
-}
-.header-top .logo a:hover {
-  background-color: #ca2c37;
-}
-.header-top .logo a:hover::after {
-  background-color: #8b2027;
-}
-.header-top .logo a:active {
-  background-color: #ba2732;
-}
-.header-top .logo a:active::after {
-  background-color: #62161c;
 }
 .header-top form {
   position: relative;
@@ -805,6 +805,7 @@ p {
 /* Information */
 .information {
   padding-top: 20px;
+  margin-bottom: 25px;
 }
 .information p {
   margin-bottom: 23px;
@@ -817,7 +818,7 @@ p {
   float: left;
   width: 58.51%;
   /* 550px/ 940px */
-  margin-bottom: 85px;
+  margin-bottom: 20px;
 }
 .company .btn {
   min-width: 200px;
@@ -826,7 +827,7 @@ p {
   margin: 0;
   padding: 0;
   list-style: none;
-  margin-bottom: 25px;
+  margin-bottom: 27px;
   font-family: Cuprum, Impact, sans-serif;
   font-weight: 400;
   font-size: 18px;
@@ -851,7 +852,7 @@ p {
   float: right;
   width: 31.91%;
   /* 300px / 940px */
-  margin-bottom: 85px;
+  margin-bottom: 20px;
 }
 .contacts a {
   display: block;
@@ -862,4 +863,36 @@ p {
 }
 .contacts .btn {
   min-width: 280px;
+}
+/* Footer content */
+.footer-content {
+  background-color: #32425c;
+  color: #ffffff;
+}
+.footer-content .logo a {
+  font-size: 30px;
+  padding: 16px 36px;
+}
+.bottom-nav {
+  float: right;
+}
+.bottom-nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-top: 30px;
+}
+.bottom-nav ul li {
+  float: left;
+  font-family: Cuprum, Impact, sans-serif;
+  font-size: 18px;
+  color: #ffffff;
+}
+.bottom-nav ul a {
+  display: inline-block;
+  margin-left: 60px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-decoration: none;
+  color: #ffffff;
 }
