@@ -789,8 +789,8 @@ h1, h2, h3, h4, h5 {
   
   &-slider {
     position: relative;
-    min-height: 275px;
-    padding-top: 14px; 
+    min-height: 285px + @service-padding;
+    padding-top: 14px;
     overflow: hidden;
     
     input[type="radio"] {
@@ -838,14 +838,14 @@ h1, h2, h3, h4, h5 {
       position: absolute;
       top: @service-padding;
       left: 100%;
-      width: 65.62%;
+      width: 65.62%; /* 620px / 940px */
       height: 100%;
       opacity: 0;
-      background-position: right bottom;
+      background-position: right 30px;
       background-repeat: no-repeat;
       
       p {
-        width: 61.29%;
+        width: 61.29%; /* 380px / 620px */
       }
       
       &.delivery {
@@ -901,6 +901,56 @@ p {
   line-height: 1.8;
 }
 
+/* Information */
+.information {
+  padding-top: 20px;
+  
+  p {
+    margin-bottom: 23px;
+    
+    &:last-of-type {
+      margin-bottom: 12px;
+    }
+  }
+}
 
+/* Company */
+.company {
+  float: left;
+  width: 58.51%; /* 550px/ 940px */
+  margin-bottom: 85px;
+  
+  .btn {
+    min-width: 180px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  ul {
+    .ul-clear();
+    margin-bottom: 25px;    
+    font-family: @font-family-compact;
+    font-weight: 400;
+    font-size: @nav-font-size;
+    
+    li {
+      position: relative;
+      padding: 10px 10px 10px 35px;
+      
+      &::before {
+        content: '';
+        position: absolute;
+        display: inline-block;
+        left: 0;
+        top: 50%;
+        width: 25px;
+        height: 2px;
+        margin-top: -1px;
+        background-color: @spec-1-color;
+        
+      }
+    }
+  }
+}
 
 

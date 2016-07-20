@@ -695,7 +695,7 @@ h5 {
 }
 .service-slider {
   position: relative;
-  min-height: 275px;
+  min-height: 325px;
   padding-top: 14px;
   overflow: hidden;
 }
@@ -738,13 +738,15 @@ h5 {
   top: 40px;
   left: 100%;
   width: 65.62%;
+  /* 620px / 940px */
   height: 100%;
   opacity: 0;
-  background-position: right bottom;
+  background-position: right 30px;
   background-repeat: no-repeat;
 }
 .service-slider-item p {
   width: 61.29%;
+  /* 380px / 620px */
 }
 .service-slider-item.delivery {
   background-image: url('../img/delivery.png');
@@ -787,4 +789,50 @@ p {
   font-size: 13px;
   font-weight: 300;
   line-height: 1.8;
+}
+/* Information */
+.information {
+  padding-top: 20px;
+}
+.information p {
+  margin-bottom: 23px;
+}
+.information p:last-of-type {
+  margin-bottom: 12px;
+}
+/* Company */
+.company {
+  float: left;
+  width: 58.51%;
+  /* 550px/ 940px */
+  margin-bottom: 85px;
+}
+.company .btn {
+  min-width: 180px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.company ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-bottom: 25px;
+  font-family: Cuprum, Impact, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+}
+.company ul li {
+  position: relative;
+  padding: 10px 10px 10px 35px;
+}
+.company ul li::before {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  left: 0;
+  top: 50%;
+  width: 25px;
+  height: 2px;
+  margin-top: -1px;
+  background-color: #ee3643;
 }
