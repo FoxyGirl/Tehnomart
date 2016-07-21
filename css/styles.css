@@ -868,9 +868,15 @@ p {
 /* Map Section */
 .map {
   margin-bottom: 59px;
+  text-align: center;
 }
 .map .wrap {
   box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.75);
+}
+.map a {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 0;
 }
 /* Footer content */
 .footer-content {
