@@ -474,12 +474,50 @@ h5 {
 }
 .promo-slider {
   float: left;
+  position: relative;
   width: 640px;
   margin-bottom: 20px;
 }
 .promo-slider-content {
+  position: relative;
   min-height: 266px;
   background-color: yellow;
+  overflow: hidden;
+}
+.promo-slider-item {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #124585;
+}
+.promo-slider-item img {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.promo-slider-item h2 {
+  margin: 25px 25px 0;
+  font-family: Cuprum, Impact, sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: #ffffff;
+}
+.promo-slider-item p {
+  margin: 0 25px;
+  color: #ffffff;
+  font-family: "Open Sans", Calibri, Arial, sans-serif;
+  font-size: 16px;
+}
+.promo-slider-text {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.promo-slider .btn {
+  position: absolute;
+  left: 35px;
+  bottom: 25px;
+  width: 175px;
 }
 .new {
   position: relative;
