@@ -1015,7 +1015,22 @@ i[class^="icon-"]::before {
   text-align: left;
 }
 /* Modals */
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+  70% {
+    transform: translateY(30px);
+  }
+  90% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 .modal-shadow {
+  display: none;
   position: fixed;
   top: 0;
   right: 0;
@@ -1024,7 +1039,11 @@ i[class^="icon-"]::before {
   background-color: #000;
   opacity: 0.7;
 }
+.modal-shadow.show {
+  display: block;
+}
 .contact-us {
+  display: none;
   position: fixed;
   left: 50%;
   top: 100px;
@@ -1037,6 +1056,10 @@ i[class^="icon-"]::before {
   background-color: #ffffff;
   border-top: 7px solid #ee3643;
   box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.75);
+}
+.contact-us.show {
+  display: block;
+  animation: bounce 0.7s;
 }
 .contact-us label {
   display: block;

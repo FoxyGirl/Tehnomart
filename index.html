@@ -329,7 +329,7 @@
             <img src="img/map.jpg" alt="map" width="300" height="157">
           </a>
         </p>
-        <a href="" class="btn">Заблудились? НапиШИТЕ НАМ!</a>
+        <a href="" class="btn" id="writeUs">Заблудились? НапиШИТЕ НАМ!</a>
       </article>
       </div>
     </div>
@@ -411,22 +411,22 @@
     <!-- end of Footer bottom -->
   </footer>
   <!-- Shadow for Modal -->
-  <div class="modal-shadow"></div>
+  <div class="modal-shadow" id="modalShadow"></div>
   <!--  Modal for Contact Us -->
-  <div class="contact-us">
-    <form action="some.php" method="post">
+  <div class="contact-us" id="modalContactUs">
+    <form action="javascript: console.log('Submit!!!');" method="post" name="formContactUs">
       <div class="wrap-form">
        <label class="contact-name">
          <span>Ваше имя:</span>
-         <input type="text" name="name" placeholder="Представьтесь, пожалуйста">
+         <input type="text" name="name" placeholder="Представьтесь, пожалуйста" required>
        </label>
        <label class="contact-email">
          <span>Ваш e-mail:</span>
-         <input type="email" name="email" placeholder="Для отправки ответа">
+         <input type="email" name="email" placeholder="Для отправки ответа" required>
        </label>
        <label>
         <span>Текст письма:</span>
-         <textarea name="message" rows="5" placeholder="В свободной форме"></textarea>
+         <textarea name="message" rows="5" placeholder="В свободной форме" required></textarea>
        </label>
       </div>
       <div class="send-form">

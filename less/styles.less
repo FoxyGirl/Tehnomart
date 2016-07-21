@@ -1164,7 +1164,16 @@ i[class^="icon-"] {
 }
 
 /* Modals */
+
+@keyframes bounce {
+	0% { transform: translateY(-2000px); }
+	70% { transform: translateY(30px); }
+	90% { transform: translateY(-10px); }
+	100% { transform: translateY(0); }
+}
+
 .modal-shadow {
+  display: none;
   position: fixed;
   top: 0;
   right: 0;
@@ -1172,9 +1181,14 @@ i[class^="icon-"] {
   height: 100vh;
   background-color: #000;
   opacity: 0.7;
+  
+  &.show {
+    display: block;
+  }
 }
 
 .contact-us {
+  display: none;
   position: fixed;
   left: 50%;
   top: 100px;
@@ -1187,6 +1201,11 @@ i[class^="icon-"] {
   background-color: @light-color;
   border-top: 7px solid @spec-1-color;
   box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.75);
+  
+  &.show {
+    display: block;
+    animation: bounce 0.7s;
+  }
   
   label {
     display: block;
