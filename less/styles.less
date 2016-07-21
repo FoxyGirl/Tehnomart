@@ -583,6 +583,71 @@ h1, h2, h3, h4, h5 {
       top: 0;
     }
     
+    &-controls {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 35px;
+      text-align: center;
+      font-size: 0;
+      
+      i {
+        display: inline-block;
+        vertical-align: top;
+        width: 6px;
+        height: 6px;
+        margin: 0 5px;
+        border-radius: 50%;
+        background-color: @light-color;
+        border: 2px solid @light-color;
+        
+        &.active-control {
+          background-color: @spec-1-color;
+        }
+      }
+    }
+    
+    &-arrows {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 50%;
+      height: 45px;
+      color: @light-color;
+      
+      .arrow {
+        position: absolute;
+        display: block;
+        width: 25px;
+        height: 45px;
+        font-weight: normal;
+        
+        &::after {
+          position: absolute;
+          left: 0;
+          top: 0;
+          font-family: 'symbols-technomart';
+          font-size: 45px;
+          font-weight: normal;
+        }
+        
+        &.prev {
+          left: 0;
+          &::after {
+            content: '\3c';
+          }
+        }
+        
+        &.next {
+          right: 0;
+          
+          &::after {
+            content: '\3e';
+          }
+        }
+      }
+    }
+    
     .btn {
       position: absolute;
       left: 25px + @wrap-out;

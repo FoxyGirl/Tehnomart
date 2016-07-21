@@ -513,6 +513,62 @@ h5 {
   left: 0;
   top: 0;
 }
+.promo-slider-controls {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 35px;
+  text-align: center;
+  font-size: 0;
+}
+.promo-slider-controls i {
+  display: inline-block;
+  vertical-align: top;
+  width: 6px;
+  height: 6px;
+  margin: 0 5px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: 2px solid #ffffff;
+}
+.promo-slider-controls i.active-control {
+  background-color: #ee3643;
+}
+.promo-slider-arrows {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 45px;
+  color: #ffffff;
+}
+.promo-slider-arrows .arrow {
+  position: absolute;
+  display: block;
+  width: 25px;
+  height: 45px;
+  font-weight: normal;
+}
+.promo-slider-arrows .arrow::after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-family: 'symbols-technomart';
+  font-size: 45px;
+  font-weight: normal;
+}
+.promo-slider-arrows .arrow.prev {
+  left: 0;
+}
+.promo-slider-arrows .arrow.prev::after {
+  content: '\3c';
+}
+.promo-slider-arrows .arrow.next {
+  right: 0;
+}
+.promo-slider-arrows .arrow.next::after {
+  content: '\3e';
+}
 .promo-slider .btn {
   position: absolute;
   left: 35px;
