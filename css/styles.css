@@ -473,6 +473,9 @@ h5 {
   background-color: rgba(0, 0, 0, 0.3);
 }
 .promo-slider {
+  position: relative;
+}
+.promo-slider-container {
   float: left;
   position: relative;
   width: 640px;
@@ -496,7 +499,7 @@ h5 {
   top: 0;
 }
 .promo-slider-item h2 {
-  margin: 25px 25px 0;
+  margin: 23px 25px 0;
   font-family: Cuprum, Impact, sans-serif;
   font-size: 36px;
   font-weight: 700;
@@ -538,7 +541,7 @@ h5 {
   position: absolute;
   left: 0;
   right: 0;
-  top: 50%;
+  bottom: 112px;
   height: 45px;
   color: #ffffff;
 }
@@ -551,27 +554,28 @@ h5 {
 }
 .promo-slider-arrows .arrow::after {
   position: absolute;
-  left: 0;
   top: 0;
   font-family: 'symbols-technomart';
   font-size: 45px;
   font-weight: normal;
 }
 .promo-slider-arrows .arrow.prev {
-  left: 0;
+  left: 25px;
 }
 .promo-slider-arrows .arrow.prev::after {
   content: '\3c';
+  left: 0;
 }
 .promo-slider-arrows .arrow.next {
-  right: 0;
+  right: 25px;
 }
 .promo-slider-arrows .arrow.next::after {
   content: '\3e';
+  right: 0;
 }
 .promo-slider .btn {
   position: absolute;
-  left: 35px;
+  left: 25px;
   bottom: 25px;
   width: 175px;
 }

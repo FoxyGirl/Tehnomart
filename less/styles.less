@@ -537,10 +537,16 @@ h1, h2, h3, h4, h5 {
   }
   
   &-slider {
-    float: left;
     position: relative;
-    width: 2*320px;
-    margin-bottom: 2*@wrap-out;    
+    
+    @slider-out: 25px;
+    
+    &-container {
+      float: left;
+      position: relative;
+      width: 2*320px;
+      margin-bottom: 2*@wrap-out;
+    }
     
     &-content {
       position: relative;
@@ -562,7 +568,7 @@ h1, h2, h3, h4, h5 {
       }
       
       h2 {
-        margin: 25px 25px 0;        
+        margin: 23px @slider-out 0;        
         font-family: @font-family-compact;
         font-size: 36px;
         font-weight: 700;
@@ -570,7 +576,7 @@ h1, h2, h3, h4, h5 {
       }
       
       p {
-        margin: 0 25px;
+        margin: 0 @slider-out;
         color: @light-color;
         font-family: @font-family-base;
         font-size: @base-font-size;
@@ -611,7 +617,7 @@ h1, h2, h3, h4, h5 {
       position: absolute;
       left: 0;
       right: 0;
-      top: 50%;
+      bottom: 112px;
       height: 45px;
       color: @light-color;
       
@@ -624,7 +630,6 @@ h1, h2, h3, h4, h5 {
         
         &::after {
           position: absolute;
-          left: 0;
           top: 0;
           font-family: 'symbols-technomart';
           font-size: 45px;
@@ -632,17 +637,20 @@ h1, h2, h3, h4, h5 {
         }
         
         &.prev {
-          left: 0;
+          left: @slider-out;
+          
           &::after {
             content: '\3c';
+            left: 0;
           }
         }
         
         &.next {
-          right: 0;
+          right: @slider-out;
           
           &::after {
             content: '\3e';
+            right: 0;
           }
         }
       }
@@ -650,7 +658,7 @@ h1, h2, h3, h4, h5 {
     
     .btn {
       position: absolute;
-      left: 25px + @wrap-out;
+      left: @slider-out;
       bottom: 25px;
       width: 175px;
     }
