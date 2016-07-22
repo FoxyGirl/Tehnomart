@@ -581,6 +581,10 @@ h1, h2, h3, h4, h5 {
         font-family: @font-family-base;
         font-size: @base-font-size;
       }
+      
+      &.active-slide {
+        z-index: 10;
+      }
     }
     
     &-text {
@@ -594,6 +598,7 @@ h1, h2, h3, h4, h5 {
       left: 0;
       right: 0;
       bottom: 35px;
+      z-index: 20;
       text-align: center;
       font-size: 0;
       
@@ -618,6 +623,7 @@ h1, h2, h3, h4, h5 {
       left: 0;
       right: 0;
       bottom: 112px;
+      z-index: 20;
       height: 45px;
       color: @light-color;
       
@@ -659,6 +665,7 @@ h1, h2, h3, h4, h5 {
     .btn {
       position: absolute;
       left: @slider-out;
+      z-index: 20;
       bottom: 25px;
       width: 175px;
     }

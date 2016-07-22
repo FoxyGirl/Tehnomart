@@ -1,3 +1,4 @@
+/**** Modal window for Write Us form"  ****/
 (function () {
   'use strict';
   
@@ -58,5 +59,47 @@
   formContactUs.addEventListener('reset', function () {
       hideModal();
   });
+  
+})();
+
+
+/**** Catalog Slider ****/
+(function () {
+  'use strict';
+  
+  var promoSlider = document.getElementById('promoSlider'),
+      sliderContent = promoSlider.querySelectorAll('.promo-slider-item'),
+      controlBlock = promoSlider.querySelector('.promo-slider-controls'),
+      sliderControls = controlBlock.getElementsByTagName('i');
+  
+  function changeSlider (e) {
+    var targetElem = e.target;
+    if ( targetElem.tagName != 'I' )  {
+      return;
+    } else {
+      var activeControl = targetElem.getAttribute('data-toggler');
+      activeControl = +activeControl;
+      controlBlock.querySelector('.active-control').classList.remove('active-control');
+      sliderControls[activeControl].classList.add('active-control');
+      
+      promoSlider.querySelector('.active-slide').classList.remove('active-slide');
+      sliderContent[activeControl].classList.add('active-slide');
+    };
+  }
+  
+  
+  /***********************/
+  
+  while ( sliderControls.length < sliderContent.length ) {
+    var newControl = document.createElement('i');
+    controlBlock.appendChild(newControl);
+  }
+  
+  for (var i = 0; i < sliderControls.length; i++) {
+    sliderControls[i].setAttribute('data-toggler', i);
+  };
+  
+  controlBlock.addEventListener('click', changeSlider);
+  
   
 })();
