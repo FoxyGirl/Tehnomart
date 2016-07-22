@@ -489,6 +489,7 @@ h5 {
 }
 .promo-slider-item {
   position: absolute;
+  left: 0;
   width: 100%;
   height: 100%;
   background-color: #124585;
@@ -512,7 +513,10 @@ h5 {
   font-size: 16px;
 }
 .promo-slider-item.active-slide {
+  left: 0;
   z-index: 10;
+  transition: left 1s;
+  animation: right-to-left 0.7s;
 }
 .promo-slider-text {
   position: absolute;
@@ -1130,6 +1134,14 @@ i[class^="icon-"]::before {
   float: left;
   margin-right: 43px;
   text-align: left;
+}
+@keyframes right-to-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 /* Modals */
 @keyframes bounce {
