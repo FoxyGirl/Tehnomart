@@ -72,7 +72,20 @@
   var promoSlider = document.getElementById('promoSlider'),
       sliderContent = promoSlider.querySelectorAll('.promo-slider-item'),
       controlBlock = promoSlider.querySelector('.promo-slider-controls'),
-      sliderControls = controlBlock.getElementsByTagName('i');
+      sliderControls = controlBlock.getElementsByTagName('i'),
+      prevSlide = promoSlider.querySelector('.active-slide'),
+      itemComputedStyle = getStyle(prevSlide),
+      zIndexSlider = 10 - 1;
+    
+    //zIndexSlider = itemComputedStyle.zIndex;
+    
+    console.log(zIndexSlider);
+
+    
+  //кросс-браузерное получение стилей элемента (elem)
+  function getStyle(elem) {
+    return window.getComputedStyle ? getComputedStyle(elem, "") : elem.currentStyle;
+  }
   
   function changeSlider(e) {
     var targetElem = e.target;
@@ -84,15 +97,13 @@
       controlBlock.querySelector('.active-control').classList.remove('active-control');
       sliderControls[activeControl].classList.add('active-control');
       
-      var prevSlide = promoSlider.querySelector('.preactive-slide');
-      
       if (prevSlide !== null) {
-        prevSlide.classList.remove('preactive-slide');
-      }      
+        prevSlide.style.zIndex = '';
+      }    
       
-      var oldActiveSlide = promoSlider.querySelector('.active-slide');
-      oldActiveSlide.classList.remove('active-slide');
-      oldActiveSlide.classList.add('preactive-slide');
+      prevSlide = promoSlider.querySelector('.active-slide');
+      prevSlide.classList.remove('active-slide');
+      prevSlide.style.zIndex = zIndexSlider;
       sliderContent[activeControl].classList.add('active-slide');
     }
   }
@@ -107,7 +118,7 @@
   
   for (var i = 0; i < sliderControls.length; i++) {
     sliderControls[i].setAttribute('data-toggler', i);
-  }
+  }  
   
   controlBlock.addEventListener('click', changeSlider);
   
