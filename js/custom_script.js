@@ -75,12 +75,7 @@
       sliderControls = controlBlock.getElementsByTagName('i'),
       prevSlide = promoSlider.querySelector('.active-slide'),
       itemComputedStyle = getStyle(prevSlide),
-      zIndexSlider = 10 - 1;
-    
-    //zIndexSlider = itemComputedStyle.zIndex;
-    
-    console.log(zIndexSlider);
-
+      zIndexSlider = 10 - 1;    
     
   //кросс-браузерное получение стилей элемента (elem)
   function getStyle(elem) {
@@ -120,7 +115,6 @@
     sliderControls[i].setAttribute('data-toggler', i);
   }  
   
-  controlBlock.addEventListener('click', changeSlider);
-  
+  controlBlock.addEventListener('click', changeSlider);  
   
 })();
