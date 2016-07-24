@@ -516,7 +516,10 @@ h5 {
   left: 0;
   z-index: 10;
   transition: left 1s;
-  animation: right-to-left 0.7s;
+  animation: right-to-left 0.7s ease-in-out;
+}
+.promo-slider-item.active-slide.left {
+  animation-name: left-to-right;
 }
 .promo-slider-item.active-slide-right {
   left: 0;
@@ -1144,6 +1147,14 @@ i[class^="icon-"]::before {
 @keyframes right-to-left {
   0% {
     transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes left-to-right {
+  0% {
+    transform: translateX(-100%);
   }
   100% {
     transform: translateX(0);

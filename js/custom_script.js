@@ -74,15 +74,10 @@
       controlBlock = promoSlider.querySelector('.promo-slider-controls'),
       sliderControls = controlBlock.getElementsByTagName('i'),
       prevSlide = promoSlider.querySelector('.active-slide'),
-      activeControl = 0,
+      activeControl,
       zIndexSlider = 10 - 1,
       prevArrow = promoSlider.querySelector('.promo-slider-arrows > .prev'),
-      nextArrow = promoSlider.querySelector('.promo-slider-arrows > .next');    
-    
-  //кросс-браузерное получение стилей элемента (elem)
-  function getStyle(elem) {
-    return window.getComputedStyle ? getComputedStyle(elem, "") : elem.currentStyle;
-  }
+      nextArrow = promoSlider.querySelector('.promo-slider-arrows > .next');        
   
   function changeSliderByControls(e) {
     var targetElem = e.target;
@@ -106,22 +101,23 @@
   function changePrevSlide() {
     if (prevSlide !== null) {
         prevSlide.style.zIndex = '';
-      }    
-      
+      }      
     prevSlide = promoSlider.querySelector('.active-slide');
     prevSlide.classList.remove('active-slide');
     prevSlide.style.zIndex = zIndexSlider;
+    if ( prevSlide.classList.contains('left') ) {
+      prevSlide.classList.remove('left');
+    }
   }
   
-  function changeSliderByArrows(direction) {
-    var direction = direction;
+  function changeSliderByArrows(direction) {    
     switch (direction) {
       case 'right' :
         ++activeControl;
         if (activeControl === sliderContent.length) {
           activeControl = 0;
         } 
-       // changeSlideControl(activeControl);
+        changeSlideControl(activeControl);
       console.log('!!!');
       break;
         
@@ -130,6 +126,8 @@
         if (activeControl < 0) {
           activeControl = sliderContent.length - 1;
         }
+        sliderContent[activeControl].classList.add('left');
+        changeSlideControl(activeControl);
       break;
         
       default:
@@ -138,7 +136,7 @@
   }
   
   
-  /***********************/
+  /******************************************************/
   
   while (sliderControls.length < sliderContent.length) {
     var newControl = document.createElement('i');
@@ -149,16 +147,12 @@
     sliderControls[i].setAttribute('data-toggler', i);
   }  
   
+  activeControl = controlBlock.querySelector('.active-control').getAttribute('data-toggler');
+  
   controlBlock.addEventListener('click', changeSliderByControls);  
+
+  nextArrow.addEventListener('click', function() {changeSliderByArrows('right')}, false);
   
-  nextArrow.addEventListener('click', function() {
-    changeSliderByArrows('right');
-    changeSlideControl(activeControl);
-  });
-  
-  prevArrow.addEventListener('click', function() {
-    changeSliderByArrows('left');
-    changeSlideControl(activeControl);
-  });
-  
+  prevArrow.addEventListener('click', function() {changeSliderByArrows('left')}, false);
+
 })();
