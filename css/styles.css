@@ -518,6 +518,12 @@ h5 {
   transition: left 1s;
   animation: right-to-left 0.7s;
 }
+.promo-slider-item.active-slide-right {
+  left: 0;
+  z-index: 10;
+  transition: left 1s;
+  animation: right-to-left 0.7s;
+}
 .promo-slider-text {
   position: absolute;
   left: 0;

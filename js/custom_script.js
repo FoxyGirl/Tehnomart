@@ -70,36 +70,70 @@
   'use strict';
   
   var promoSlider = document.getElementById('promoSlider'),
-      sliderContent = promoSlider.querySelectorAll('.promo-slider-item'),
+      sliderContent = promoSlider.getElementsByClassName('promo-slider-item'),
       controlBlock = promoSlider.querySelector('.promo-slider-controls'),
       sliderControls = controlBlock.getElementsByTagName('i'),
       prevSlide = promoSlider.querySelector('.active-slide'),
-      itemComputedStyle = getStyle(prevSlide),
-      zIndexSlider = 10 - 1;    
+      activeControl = 0,
+      zIndexSlider = 10 - 1,
+      prevArrow = promoSlider.querySelector('.promo-slider-arrows > .prev'),
+      nextArrow = promoSlider.querySelector('.promo-slider-arrows > .next');    
     
   //кросс-браузерное получение стилей элемента (elem)
   function getStyle(elem) {
     return window.getComputedStyle ? getComputedStyle(elem, "") : elem.currentStyle;
   }
   
-  function changeSlider(e) {
+  function changeSliderByControls(e) {
     var targetElem = e.target;
     if (targetElem.tagName != 'I')  {
       return;
     } else {
-      var activeControl = targetElem.getAttribute('data-toggler');
-      activeControl = +activeControl;
-      controlBlock.querySelector('.active-control').classList.remove('active-control');
-      sliderControls[activeControl].classList.add('active-control');
-      
-      if (prevSlide !== null) {
+      activeControl = targetElem.getAttribute('data-toggler');
+      activeControl = Number(activeControl);
+      changeSlideControl(activeControl);
+    }
+  }
+
+  function changeSlideControl(activeControl) {
+    controlBlock.querySelector('.active-control').classList.remove('active-control');
+    sliderControls[activeControl].classList.add('active-control');
+
+    changePrevSlide();
+    sliderContent[activeControl].classList.add('active-slide'); 
+  }
+  
+  function changePrevSlide() {
+    if (prevSlide !== null) {
         prevSlide.style.zIndex = '';
       }    
       
-      prevSlide = promoSlider.querySelector('.active-slide');
-      prevSlide.classList.remove('active-slide');
-      prevSlide.style.zIndex = zIndexSlider;
-      sliderContent[activeControl].classList.add('active-slide');
+    prevSlide = promoSlider.querySelector('.active-slide');
+    prevSlide.classList.remove('active-slide');
+    prevSlide.style.zIndex = zIndexSlider;
+  }
+  
+  function changeSliderByArrows(direction) {
+    var direction = direction;
+    switch (direction) {
+      case 'right' :
+        ++activeControl;
+        if (activeControl === sliderContent.length) {
+          activeControl = 0;
+        } 
+       // changeSlideControl(activeControl);
+      console.log('!!!');
+      break;
+        
+      case 'left' :
+        --activeControl;
+        if (activeControl < 0) {
+          activeControl = sliderContent.length - 1;
+        }
+      break;
+        
+      default:
+        alert( 'Я таких значений не знаю' );        
     }
   }
   
@@ -115,6 +149,16 @@
     sliderControls[i].setAttribute('data-toggler', i);
   }  
   
-  controlBlock.addEventListener('click', changeSlider);  
+  controlBlock.addEventListener('click', changeSliderByControls);  
+  
+  nextArrow.addEventListener('click', function() {
+    changeSliderByArrows('right');
+    changeSlideControl(activeControl);
+  });
+  
+  prevArrow.addEventListener('click', function() {
+    changeSliderByArrows('left');
+    changeSlideControl(activeControl);
+  });
   
 })();
