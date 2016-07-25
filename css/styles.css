@@ -1269,3 +1269,36 @@ i[class^="icon-"]::before {
 .send-form .btn[type="reset"]:hover {
   color: #ee3643;
 }
+/* Responsive */
+@media screen and (max-width: 959px) {
+  .header-definit {
+    width: 36.45%;
+  }
+  .header-definit p {
+    padding: 0 20px;
+  }
+  .header-user {
+    width: 36.45%;
+  }
+}
+@media screen and (max-width: 900px) {
+  .header-top {
+    margin-bottom: 20px;
+  }
+  .header-content {
+    margin-bottom: 20px;
+  }
+  .header-user {
+    width: 25%;
+  }
+  .header-user .top-nav-user {
+    text-align: right;
+  }
+  .header-user li {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+  .header-user li:last-child {
+    margin-bottom: 0;
+  }
+}

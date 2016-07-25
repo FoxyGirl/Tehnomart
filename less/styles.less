@@ -1434,3 +1434,50 @@ i[class^="icon-"] {
     }
   }
 }
+
+/* Responsive */
+@media screen and (max-width: 959px) {
+  .header {
+    &-definit {
+      width: 36.45%;
+      
+      p {
+        padding: 0 20px;
+      }
+    }
+    
+    &-user {
+      width: 36.45%;
+    }
+  }
+
+}
+
+@media screen and (max-width: 900px) {
+  .header {
+    &-top {
+      margin-bottom: 2*@wrap-out;
+    }
+    
+    &-content {
+      margin-bottom: 2*@wrap-out;
+    }
+        
+    &-user {
+      width: 25%;
+      
+      .top-nav-user {
+        text-align: right;
+      }
+      
+      li {
+        margin-right: 0;
+        margin-bottom: 15px;
+        
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
