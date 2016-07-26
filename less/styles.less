@@ -1436,6 +1436,22 @@ i[class^="icon-"] {
 }
 
 /* Responsive */
+@media screen and (max-width: 979px) {
+  .promo-item {
+    width: 33.333%;
+  }
+  
+  .promo-slider-container {
+    width: 66.666%;
+  }
+  
+  .contacts {
+    .btn {
+      min-width: auto;
+    }
+  } 
+}
+
 @media screen and (max-width: 959px) {
   .header {
     &-definit {
@@ -1480,7 +1496,51 @@ i[class^="icon-"] {
       }
     }
   }
+  
+  .promo-item {
+    &-content {    
+      &.material {
+        background-position: 95% -2px;
+      }
+      
+      &.instrument {
+        background-position: 95% -161px;
+      }
+      
+      &.technics {
+        background-position: 95% -279px;
+      }
+      
+      &.discount {
+        background-position: 95% -424px;
+      }
+      
+      &.delivery {
+        background-position: 95% -563px;
+      }
+    }
+  }
 }
+
+@media screen and (max-width: 857px) {
+  .promo-item {
+    width: 50%;
+    
+    &:first-child {
+      margin-left: 25%;
+      margin-right: 25%;
+    }
+  }
+  
+  .promo-slider-container {
+    width: 100%;
+    
+    img {
+      width: 100%;
+    }
+  }
+}
+
 
 @media screen and (max-width: 690px) {
   
@@ -1540,8 +1600,59 @@ i[class^="icon-"] {
       }
     }
   }
+  
+
 }
 
-@media screen and (max-width: 540px) {
+@media screen and (max-width: 657px) {
+  .promo-slider {
+    
+    &-item {
+      h2 {
+        margin-top: 5%;
+      }
+    }
   
+    &-content {
+      min-height: 250px;
+    }
+
+    &-arrows {
+      bottom: 80px;
+    }
+    
+    &-controls {
+      bottom: 25px;
+    }
+    
+    .btn {
+      bottom: 15px;
+      width: 115px;
+    }
+  }
+}
+
+@media screen and (max-width: 622px) {
+  
+  .promo-item {    
+    &:first-child {
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+  
+  .promo-slider-container {
+    img {
+      width: auto;
+      height: 100%;
+      margin-left: -10%;
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .promo-item {
+    width: 100%;
+  }
 }

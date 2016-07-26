@@ -1270,6 +1270,17 @@ i[class^="icon-"]::before {
   color: #ee3643;
 }
 /* Responsive */
+@media screen and (max-width: 979px) {
+  .promo-item {
+    width: 33.333%;
+  }
+  .promo-slider-container {
+    width: 66.666%;
+  }
+  .contacts .btn {
+    min-width: auto;
+  }
+}
 @media screen and (max-width: 959px) {
   .header-definit {
     width: 36.45%;
@@ -1300,6 +1311,36 @@ i[class^="icon-"]::before {
   }
   .header-user li:last-child {
     margin-bottom: 0;
+  }
+  .promo-item-content.material {
+    background-position: 95% -2px;
+  }
+  .promo-item-content.instrument {
+    background-position: 95% -161px;
+  }
+  .promo-item-content.technics {
+    background-position: 95% -279px;
+  }
+  .promo-item-content.discount {
+    background-position: 95% -424px;
+  }
+  .promo-item-content.delivery {
+    background-position: 95% -563px;
+  }
+}
+@media screen and (max-width: 857px) {
+  .promo-item {
+    width: 50%;
+  }
+  .promo-item:first-child {
+    margin-left: 25%;
+    margin-right: 25%;
+  }
+  .promo-slider-container {
+    width: 100%;
+  }
+  .promo-slider-container img {
+    width: 100%;
   }
 }
 @media screen and (max-width: 690px) {
@@ -1343,5 +1384,40 @@ i[class^="icon-"]::before {
   }
   .header-user li {
     margin-right: 20px;
+  }
+}
+@media screen and (max-width: 657px) {
+  .promo-slider-item h2 {
+    margin-top: 5%;
+  }
+  .promo-slider-content {
+    min-height: 250px;
+  }
+  .promo-slider-arrows {
+    bottom: 80px;
+  }
+  .promo-slider-controls {
+    bottom: 25px;
+  }
+  .promo-slider .btn {
+    bottom: 15px;
+    width: 115px;
+  }
+}
+@media screen and (max-width: 622px) {
+  .promo-item:first-child {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .promo-slider-container img {
+    width: auto;
+    height: 100%;
+    margin-left: -10%;
+  }
+}
+@media screen and (max-width: 550px) {
+  .promo-item {
+    width: 100%;
   }
 }
