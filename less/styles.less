@@ -1481,3 +1481,67 @@ i[class^="icon-"] {
     }
   }
 }
+
+@media screen and (max-width: 690px) {
+  
+  .top-nav {
+    margin-top: @wrap-out;
+  }
+  
+  .header-definit {
+    p {
+      padding: 0 @wrap-out;
+    }
+  }
+  
+  .top-nav-user {
+    a {
+      padding-right: 15px;
+      padding-left: 15px;
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .header {
+    &-definit {
+      float: none;
+      width: auto;
+      max-width: 100%;
+      margin-bottom: 2*@wrap-out;
+      text-align: center;
+    }
+  
+    &-contact {
+      float: none;
+      width: auto;
+      margin-bottom: 2*@wrap-out;
+      text-align: center;
+      
+      a {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  
+    &-user {
+      float: none;
+      width: auto;
+      max-width: 100%;
+      text-align: center;
+      
+      .top-nav-user{
+        text-align: center;
+        
+      }
+      
+      li {
+        margin-right: 20px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 540px) {
+  
+}
