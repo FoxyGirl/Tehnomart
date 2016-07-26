@@ -1669,6 +1669,11 @@ i[class^="icon-"] {
 
 
 @media screen and (max-width: 640px) {
+  h2 {
+    margin-top: 2*@wrap-out;
+    margin-bottom: @wrap-out;
+  }
+  
   .header {
     &-definit {
       float: none;
@@ -1707,7 +1712,9 @@ i[class^="icon-"] {
     }
   }
   
-  .company {  
+  .company { 
+    margin-bottom: 40px;
+    
     p {
       float: none;
       width: auto;

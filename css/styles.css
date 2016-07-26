@@ -1438,6 +1438,10 @@ i[class^="icon-"]::before {
   }
 }
 @media screen and (max-width: 640px) {
+  h2 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
   .header-definit {
     float: none;
     width: auto;
@@ -1466,6 +1470,9 @@ i[class^="icon-"]::before {
   }
   .header-user li {
     margin-right: 20px;
+  }
+  .company {
+    margin-bottom: 40px;
   }
   .company p {
     float: none;
