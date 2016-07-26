@@ -1123,6 +1123,7 @@ p {
   
   img {
     max-width: 100%;
+    height: auto;
   }
   
   .btn {
@@ -1556,6 +1557,48 @@ i[class^="icon-"] {
       margin-left: -115px;
     }
   }
+  
+  .company {
+    float: none;
+    width: auto;
+    
+    p:last-of-type {
+      float: left;
+      width: 60%;
+      margin-bottom: 20px;
+    }
+    
+    ul {
+      float: right;
+      width: 35%;
+      margin-bottom: 20px;
+    }
+  }
+  
+  .information {
+    margin-bottom: 0;
+  }
+  
+  .contacts {
+    float: none;
+    width: auto;
+    
+    a {
+      display: inline-block;
+    }
+    
+    p {
+      float: left;
+      width: 60%;
+      margin-bottom: 40px;
+    }
+    
+    p:last-of-type {
+      float: right;
+      width: 35%;
+      margin-bottom: 20px;
+    }
+  }
 }
 
 @media screen and (max-width: 690px) {
@@ -1577,20 +1620,53 @@ i[class^="icon-"] {
     }
   }  
 
-  .brands-item {
+  .brands {
     margin-bottom: 2*@wrap-out;
     
-    a {
-      width: 188px;
-      height: 123px;
-      
-      img {
-        max-width: 100%;
-        max-height: 100%;
+    &-item {
+      margin-bottom: 2*@wrap-out;
+
+      a {
+        width: 188px;
+        height: 123px;
+
+        img {
+          max-width: 100%;
+          max-height: 100%;
+        }
       }
     }
-  }  
+  }
 }
+
+@media screen and (max-width: 657px) {
+  .promo-slider {    
+    &-item {
+      h2 {
+        margin-top: 5%;
+      }
+    }
+  
+    &-content {
+      min-height: 250px;
+    }
+
+    &-arrows {
+      bottom: 80px;
+    }
+    
+    &-controls {
+      bottom: 25px;
+    }
+    
+    .btn {
+      bottom: 15px;
+      width: 115px;
+    }
+  }
+
+}
+
 
 @media screen and (max-width: 640px) {
   .header {
@@ -1631,35 +1707,50 @@ i[class^="icon-"] {
     }
   }
   
-
-}
-
-@media screen and (max-width: 657px) {
-  .promo-slider {    
-    &-item {
-      h2 {
-        margin-top: 5%;
+  .company {  
+    p {
+      float: none;
+      width: auto;
+    }
+    
+    p:last-of-type {
+      float: none;
+      width: auto;
+      margin-bottom: 5px;
+    }
+    
+    ul {
+      float: none;
+      width: auto;
+      
+      li {
+        display: inline-block;
+        padding-left: 15px;
+        margin-right: 10px;
+        
+        &::before {
+          top: 47%;
+          width: 5px;
+          height: 5px;
+          border-radius: 50%;
+        }
       }
     }
+  }
   
-    &-content {
-      min-height: 250px;
-    }
-
-    &-arrows {
-      bottom: 80px;
+  .contacts { 
+    a {
+      margin-bottom: 0;
     }
     
-    &-controls {
-      bottom: 25px;
+    p {
+      width: 40%;
     }
     
-    .btn {
-      bottom: 15px;
-      width: 115px;
+    p:last-of-type {
+      width: 45%;
     }
   }
-
 }
 
 @media screen and (max-width: 622px) {
@@ -1716,7 +1807,37 @@ i[class^="icon-"] {
 
 }
 
+@media screen and (max-width: 525px) {
+  
+  .brands-item {
+    a {
+      width: 138px;
+      height: 73px;
+      
+      img {
+        max-width: 90%;
+        max-height: 80%;
+      }
+    }
+  }
+  
+  .contacts {  
+    
+    p {
+      float: none;
+      width: auto;
+      margin-bottom: @wrap-out;
+    }
+    
+    p:last-of-type {
+      float: none;
+      width: auto;
+    }
+  }
+}
+
 @media screen and (max-width: 340px) {
+  
   .catalog {
     &-item {
       width: 80%;

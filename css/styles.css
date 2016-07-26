@@ -980,6 +980,7 @@ p {
 }
 .contacts img {
   max-width: 100%;
+  height: auto;
 }
 .contacts .btn {
   min-width: 280px;
@@ -1357,6 +1358,40 @@ i[class^="icon-"]::before {
     width: 230px;
     margin-left: -115px;
   }
+  .company {
+    float: none;
+    width: auto;
+  }
+  .company p:last-of-type {
+    float: left;
+    width: 60%;
+    margin-bottom: 20px;
+  }
+  .company ul {
+    float: right;
+    width: 35%;
+    margin-bottom: 20px;
+  }
+  .information {
+    margin-bottom: 0;
+  }
+  .contacts {
+    float: none;
+    width: auto;
+  }
+  .contacts a {
+    display: inline-block;
+  }
+  .contacts p {
+    float: left;
+    width: 60%;
+    margin-bottom: 40px;
+  }
+  .contacts p:last-of-type {
+    float: right;
+    width: 35%;
+    margin-bottom: 20px;
+  }
 }
 @media screen and (max-width: 690px) {
   .top-nav {
@@ -1369,6 +1404,9 @@ i[class^="icon-"]::before {
     padding-right: 15px;
     padding-left: 15px;
   }
+  .brands {
+    margin-bottom: 20px;
+  }
   .brands-item {
     margin-bottom: 20px;
   }
@@ -1379,6 +1417,24 @@ i[class^="icon-"]::before {
   .brands-item a img {
     max-width: 100%;
     max-height: 100%;
+  }
+}
+@media screen and (max-width: 657px) {
+  .promo-slider-item h2 {
+    margin-top: 5%;
+  }
+  .promo-slider-content {
+    min-height: 250px;
+  }
+  .promo-slider-arrows {
+    bottom: 80px;
+  }
+  .promo-slider-controls {
+    bottom: 25px;
+  }
+  .promo-slider .btn {
+    bottom: 15px;
+    width: 115px;
   }
 }
 @media screen and (max-width: 640px) {
@@ -1411,23 +1467,38 @@ i[class^="icon-"]::before {
   .header-user li {
     margin-right: 20px;
   }
-}
-@media screen and (max-width: 657px) {
-  .promo-slider-item h2 {
-    margin-top: 5%;
+  .company p {
+    float: none;
+    width: auto;
   }
-  .promo-slider-content {
-    min-height: 250px;
+  .company p:last-of-type {
+    float: none;
+    width: auto;
+    margin-bottom: 5px;
   }
-  .promo-slider-arrows {
-    bottom: 80px;
+  .company ul {
+    float: none;
+    width: auto;
   }
-  .promo-slider-controls {
-    bottom: 25px;
+  .company ul li {
+    display: inline-block;
+    padding-left: 15px;
+    margin-right: 10px;
   }
-  .promo-slider .btn {
-    bottom: 15px;
-    width: 115px;
+  .company ul li::before {
+    top: 47%;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+  }
+  .contacts a {
+    margin-bottom: 0;
+  }
+  .contacts p {
+    width: 40%;
+  }
+  .contacts p:last-of-type {
+    width: 45%;
   }
 }
 @media screen and (max-width: 622px) {
@@ -1462,6 +1533,25 @@ i[class^="icon-"]::before {
   .catalog-item-price {
     padding-left: 15px;
     padding-right: 15px;
+  }
+}
+@media screen and (max-width: 525px) {
+  .brands-item a {
+    width: 138px;
+    height: 73px;
+  }
+  .brands-item a img {
+    max-width: 90%;
+    max-height: 80%;
+  }
+  .contacts p {
+    float: none;
+    width: auto;
+    margin-bottom: 10px;
+  }
+  .contacts p:last-of-type {
+    float: none;
+    width: auto;
   }
 }
 @media screen and (max-width: 340px) {
