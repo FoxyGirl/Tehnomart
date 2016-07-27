@@ -1982,6 +1982,32 @@ i[class^="icon-"] {
 }
 
 @media screen and (max-width: 550px) {
+  .header-top {
+    .top-nav {
+      width: 100%;
+      
+      ul {
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-direction: row;
+            -ms-flex-direction: row;      
+                flex-direction: row;
+        -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;        
+        padding: 0;
+      }
+    
+      li {
+        -webkit-flex-grow: 1;
+            -ms-flex-grow: 1;
+                flex-grow: 1;
+        display: block;
+      }
+    }
+  }
+  
   .promo-item {
     width: 100%;
   }
@@ -2024,6 +2050,19 @@ i[class^="icon-"] {
 
 @media screen and (max-width: 525px) {
   
+  .header-top {
+    form {
+      float: none;
+      clear: both;
+      width: auto;
+      padding-top: 10px;
+      
+      .search-submit::before {
+        padding-top: 20px;
+      }
+    }
+  } 
+  
   .brands-item {
     a {
       width: 138px;
@@ -2051,6 +2090,7 @@ i[class^="icon-"] {
 }
 
 @media screen and (max-width: 450px) {
+  
   .promo-slider {    
     &-content {
       min-height: 210px;
