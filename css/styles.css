@@ -1579,7 +1579,6 @@ i[class^="icon-"]::before {
   .promo-slider-container img {
     width: auto;
     height: 100%;
-    margin-left: -10%;
   }
   .service-header {
     width: auto;
@@ -1620,6 +1619,9 @@ i[class^="icon-"]::before {
   .promo-item {
     width: 100%;
   }
+  .promo-slider-container img {
+    margin-left: -10%;
+  }
   .catalog-item {
     width: 160px;
   }
@@ -1657,6 +1659,28 @@ i[class^="icon-"]::before {
     width: auto;
   }
 }
+@media screen and (max-width: 450px) {
+  .promo-slider-content {
+    min-height: 210px;
+  }
+  .promo-slider-content img {
+    margin-left: -15%;
+  }
+  .promo-slider-item h2 {
+    font-size: 26px;
+  }
+  .promo-slider-item p {
+    font-size: 15px;
+  }
+  .promo-slider-controls {
+    display: none;
+  }
+  .promo-slider .btn {
+    left: 50%;
+    width: 130px;
+    margin-left: -65px;
+  }
+}
 @media screen and (max-width: 400px) {
   .service-slider .service-slider-item {
     background-image: none;
@@ -1670,6 +1694,18 @@ i[class^="icon-"]::before {
   }
 }
 @media screen and (max-width: 340px) {
+  .promo-slider-content {
+    min-height: 190px;
+  }
+  .promo-slider-content img {
+    margin-left: -20%;
+  }
+  .promo-slider-arrows {
+    bottom: 60px;
+  }
+  .promo-slider-arrows .arrow::after {
+    font-size: 35px;
+  }
   .catalog-item {
     width: 80%;
   }
