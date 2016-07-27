@@ -1523,6 +1523,16 @@ i[class^="icon-"] {
       }
     }
   }
+  
+  .footer-content {
+    nav {
+      ul {
+        a {
+          margin-left: 40px;
+        }
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 857px) {
@@ -1592,6 +1602,18 @@ i[class^="icon-"] {
     display: block;
     max-width: 100%;
     margin-bottom: 2*@wrap-out;
+  }
+}
+
+@media screen and (max-width: 770px) {
+    .footer-content {
+    nav {
+      ul {
+        a {
+          margin-left: 20px;
+        }
+      }
+    }
   }
 }
 
@@ -1686,6 +1708,32 @@ i[class^="icon-"] {
           max-height: 100%;
         }
       }
+    }
+  }
+  
+  .footer-content {
+    padding-bottom: 2*@wrap-out;
+    
+    .logo {
+      a {
+        padding: 8px 20px 6px;
+      }
+    }
+    
+    nav {
+      ul {
+        margin-top: @wrap-out;
+      }
+    }
+  }
+  
+  .address {
+    float: none;
+    clear: both;
+    text-align: center;
+    
+    a {
+      display: inline-block;
     }
   }
 }

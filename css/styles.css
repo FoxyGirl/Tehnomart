@@ -1331,6 +1331,9 @@ i[class^="icon-"]::before {
   .promo-item-content.delivery {
     background-position: 95% -563px;
   }
+  .footer-content nav ul a {
+    margin-left: 40px;
+  }
 }
 @media screen and (max-width: 857px) {
   .promo-item {
@@ -1381,6 +1384,11 @@ i[class^="icon-"]::before {
     display: block;
     max-width: 100%;
     margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 770px) {
+  .footer-content nav ul a {
+    margin-left: 20px;
   }
 }
 @media screen and (max-width: 730px) {
@@ -1454,6 +1462,23 @@ i[class^="icon-"]::before {
   .brands-item a img {
     max-width: 100%;
     max-height: 100%;
+  }
+  .footer-content {
+    padding-bottom: 20px;
+  }
+  .footer-content .logo a {
+    padding: 8px 20px 6px;
+  }
+  .footer-content nav ul {
+    margin-top: 10px;
+  }
+  .address {
+    float: none;
+    clear: both;
+    text-align: center;
+  }
+  .address a {
+    display: inline-block;
   }
 }
 @media screen and (max-width: 657px) {
