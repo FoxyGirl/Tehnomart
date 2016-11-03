@@ -1362,9 +1362,12 @@ i[class^="icon-"]::before {
 }
 @media screen and (max-width: 857px) {
   .promo-item {
+    width: 100%;
+  }
+  .promo-item.half {
     width: 50%;
   }
-  .promo-item:first-child {
+  .promo-item.half:first-child {
     margin-left: 25%;
     margin-right: 25%;
   }
@@ -1684,6 +1687,9 @@ i[class^="icon-"]::before {
     display: block;
   }
   .promo-item {
+    width: 100%;
+  }
+  .promo-item.half {
     width: 100%;
   }
   .promo-slider-container img {
